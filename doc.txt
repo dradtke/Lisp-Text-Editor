@@ -1,0 +1,20 @@
+---- Setting up gtk-cffi -----
+
+After doing some searching for Lisp GTK+ libraries, I settled on one called gtk-cffi. It utilizes Lisp's foreign-function interface and appears to be relatively up-to-date, even including support for GTK3. Looking through the examples, gtk-cffi uses another library called 'asdf' ("another system definition facility") which changes how Lisp handles loading external components. The documentation I've found says that asdf is pre-included in CLisp (my implementation), though initial attempts to load it haven't worked.
+
+The solution to this has apparently been packaged up into a program called quicklisp, which is a lisp file that must be downloaded, loaded, and run using a special install function. Installation creates a new folder called 'quicklisp' in my home directory, which contains a file called 'setup.lisp' which is supposed to act as the entry point for the provided libraries. After loading setup.lisp, the asdf library is loaded and ready to use.
+
+Going back to the gtk-cffi examples, loading setup.lisp followed by the example now results in an error saying that gtk-cffi was not found. After a little more searching, it appears that asdf's search path can be modified either via the CL_SOURCE_REGISTRY environment variable or programmatically using a function called (initialize-source-registry).
+
+Lisp can now find the gtk-cffi library, but the example now runs into a dependency error (specifically, missing component "GTK-CFFI-SYSTEM::GIO-CFFI"). Modules appear to be defined using .asd files, yet gio-cffi.asd is nowhere to be found.
+
+
+----- Trying cl-gtk2 -----
+
+After narrowing down the dependencies, gtk-cffi kept running into an error saying that it couldn't locate "cffi-objects", which is apparently not the same as "cffi-object". To see if things would go more smoothly with another implementation, I decided to try out cl-gtk2.
+
+Loading dependencies went much more smoothly, though on my first attempt to load up the system CLisp ran out of stack space. After increasing the stack up to 1024 MB, all went well and I was finally able to load a demo which demonstrated the bindings working.
+
+----- Hello World -----
+
+I can finally access GTK through Lisp by putting at the top of my file a call to load quicklisp's setup.lisp, then its 7 dependencies, and finally loading cl-gtk2 itself.
