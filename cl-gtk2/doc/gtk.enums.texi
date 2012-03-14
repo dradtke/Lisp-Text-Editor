@@ -1,0 +1,1327 @@
+@menu
+* anchor-type::
+* arrow-type::
+* assistant-page-type::
+* builder-error::
+* button-box-style::
+* buttons-type::
+* c-list-drag-pos::
+* c-tree-expander-style::
+* c-tree-expansion-type::
+* c-tree-line-style::
+* c-tree-pos::
+* cell-renderer-accel-mode::
+* cell-renderer-mode::
+* cell-type::
+* corner-type::
+* curve-type::
+* delete-type::
+* direction-type::
+* drag-result::
+* entry-icon-position::
+* expander-style::
+* file-chooser-action::
+* file-chooser-confirmation::
+* file-chooser-error::
+* i-m-preedit-style::
+* i-m-status-style::
+* icon-size::
+* icon-theme-error::
+* icon-view-drop-position::
+* image-type::
+* justification::
+* match-type::
+* menu-direction-type::
+* message-type::
+* metric-type::
+* movement-step::
+* notebook-tab::
+* number-up-layout::
+* orientation::
+* pack-direction::
+* pack-type::
+* page-orientation::
+* page-set::
+* path-priority-type::
+* path-type::
+* policy-type::
+* position-type::
+* preview-type::
+* print-duplex::
+* print-error::
+* print-operation-action::
+* print-operation-result::
+* print-pages::
+* print-quality::
+* print-status::
+* progress-bar-orientation::
+* progress-bar-style::
+* rc-token-type::
+* recent-chooser-error::
+* recent-manager-error::
+* recent-sort-type::
+* relief-style::
+* resize-mode::
+* response-type::
+* scroll-step::
+* scroll-type::
+* selection-mode::
+* sensitivity-type::
+* shadow-type::
+* side-type::
+* size-group-mode::
+* sort-type::
+* spin-button-update-policy::
+* spin-type::
+* state-type::
+* submenu-direction::
+* submenu-placement::
+* text-buffer-target-info::
+* text-direction::
+* text-window-type::
+* toolbar-child-type::
+* toolbar-space-style::
+* toolbar-style::
+* tree-view-column-sizing::
+* tree-view-drop-position::
+* tree-view-grid-lines::
+* tree-view-mode::
+* unit::
+* update-type::
+* visibility::
+* widget-help-type::
+* window-position::
+* window-type::
+* wrap-mode::
+* pango-wrap-mode::
+* pango-ellipsize-mode::
+@end menu
+
+@node anchor-type
+@section anchor-type
+@Enum anchor-type
+Values: 
+@itemize
+@item @anchor{enum.anchor-type.center}:center
+@item @anchor{enum.anchor-type.e}:e
+@item @anchor{enum.anchor-type.east}:east
+@item @anchor{enum.anchor-type.n}:n
+@item @anchor{enum.anchor-type.ne}:ne
+@item @anchor{enum.anchor-type.north}:north
+@item @anchor{enum.anchor-type.north-east}:north-east
+@item @anchor{enum.anchor-type.north-west}:north-west
+@item @anchor{enum.anchor-type.nw}:nw
+@item @anchor{enum.anchor-type.s}:s
+@item @anchor{enum.anchor-type.se}:se
+@item @anchor{enum.anchor-type.south}:south
+@item @anchor{enum.anchor-type.south-east}:south-east
+@item @anchor{enum.anchor-type.south-west}:south-west
+@item @anchor{enum.anchor-type.sw}:sw
+@item @anchor{enum.anchor-type.w}:w
+@item @anchor{enum.anchor-type.west}:west
+@end itemize
+
+
+@node arrow-type
+@section arrow-type
+@Enum arrow-type
+Values: 
+@itemize
+@item @anchor{enum.arrow-type.down}:down
+@item @anchor{enum.arrow-type.left}:left
+@item @anchor{enum.arrow-type.none}:none
+@item @anchor{enum.arrow-type.right}:right
+@item @anchor{enum.arrow-type.up}:up
+@end itemize
+
+
+@node assistant-page-type
+@section assistant-page-type
+@Enum assistant-page-type
+Values: 
+@itemize
+@item @anchor{enum.assistant-page-type.confirm}:confirm
+@item @anchor{enum.assistant-page-type.content}:content
+@item @anchor{enum.assistant-page-type.intro}:intro
+@item @anchor{enum.assistant-page-type.progress}:progress
+@item @anchor{enum.assistant-page-type.summary}:summary
+@end itemize
+
+
+@node builder-error
+@section builder-error
+@Enum builder-error
+Values: 
+@itemize
+@item @anchor{enum.builder-error.duplicate-id}:duplicate-id
+@item @anchor{enum.builder-error.invalid-attribute}:invalid-attribute
+@item @anchor{enum.builder-error.invalid-tag}:invalid-tag
+@item @anchor{enum.builder-error.invalid-type-function}:invalid-type-function
+@item @anchor{enum.builder-error.invalid-value}:invalid-value
+@item @anchor{enum.builder-error.missing-attribute}:missing-attribute
+@item @anchor{enum.builder-error.missing-property-value}:missing-property-value
+@item @anchor{enum.builder-error.unhandled-tag}:unhandled-tag
+@item @anchor{enum.builder-error.version-mismatch}:version-mismatch
+@end itemize
+
+
+@node button-box-style
+@section button-box-style
+@Enum button-box-style
+Values: 
+@itemize
+@item @anchor{enum.button-box-style.center}:center
+@item @anchor{enum.button-box-style.default-style}:default-style
+@item @anchor{enum.button-box-style.edge}:edge
+@item @anchor{enum.button-box-style.end}:end
+@item @anchor{enum.button-box-style.spread}:spread
+@item @anchor{enum.button-box-style.start}:start
+@end itemize
+
+
+@node buttons-type
+@section buttons-type
+@Enum buttons-type
+Values: 
+@itemize
+@item @anchor{enum.buttons-type.cancel}:cancel
+@item @anchor{enum.buttons-type.close}:close
+@item @anchor{enum.buttons-type.none}:none
+@item @anchor{enum.buttons-type.ok}:ok
+@item @anchor{enum.buttons-type.ok-cancel}:ok-cancel
+@item @anchor{enum.buttons-type.yes-no}:yes-no
+@end itemize
+
+
+@node c-list-drag-pos
+@section c-list-drag-pos
+@Enum c-list-drag-pos
+Values: 
+@itemize
+@item @anchor{enum.c-list-drag-pos.after}:after
+@item @anchor{enum.c-list-drag-pos.before}:before
+@item @anchor{enum.c-list-drag-pos.into}:into
+@item @anchor{enum.c-list-drag-pos.none}:none
+@end itemize
+
+
+@node c-tree-expander-style
+@section c-tree-expander-style
+@Enum c-tree-expander-style
+Values: 
+@itemize
+@item @anchor{enum.c-tree-expander-style.circular}:circular
+@item @anchor{enum.c-tree-expander-style.none}:none
+@item @anchor{enum.c-tree-expander-style.square}:square
+@item @anchor{enum.c-tree-expander-style.triangle}:triangle
+@end itemize
+
+
+@node c-tree-expansion-type
+@section c-tree-expansion-type
+@Enum c-tree-expansion-type
+Values: 
+@itemize
+@item @anchor{enum.c-tree-expansion-type.collapse}:collapse
+@item @anchor{enum.c-tree-expansion-type.collapse-recursive}:collapse-recursive
+@item @anchor{enum.c-tree-expansion-type.expand}:expand
+@item @anchor{enum.c-tree-expansion-type.expand-recursive}:expand-recursive
+@item @anchor{enum.c-tree-expansion-type.toggle}:toggle
+@item @anchor{enum.c-tree-expansion-type.toggle-recursive}:toggle-recursive
+@end itemize
+
+
+@node c-tree-line-style
+@section c-tree-line-style
+@Enum c-tree-line-style
+Values: 
+@itemize
+@item @anchor{enum.c-tree-line-style.dotted}:dotted
+@item @anchor{enum.c-tree-line-style.none}:none
+@item @anchor{enum.c-tree-line-style.solid}:solid
+@item @anchor{enum.c-tree-line-style.tabbed}:tabbed
+@end itemize
+
+
+@node c-tree-pos
+@section c-tree-pos
+@Enum c-tree-pos
+Values: 
+@itemize
+@item @anchor{enum.c-tree-pos.after}:after
+@item @anchor{enum.c-tree-pos.as-child}:as-child
+@item @anchor{enum.c-tree-pos.before}:before
+@end itemize
+
+
+@node cell-renderer-accel-mode
+@section cell-renderer-accel-mode
+@Enum cell-renderer-accel-mode
+Values: 
+@itemize
+@item @anchor{enum.cell-renderer-accel-mode.gtk}:gtk
+@item @anchor{enum.cell-renderer-accel-mode.other}:other
+@end itemize
+
+
+@node cell-renderer-mode
+@section cell-renderer-mode
+@Enum cell-renderer-mode
+Values: 
+@itemize
+@item @anchor{enum.cell-renderer-mode.activatable}:activatable
+@item @anchor{enum.cell-renderer-mode.editable}:editable
+@item @anchor{enum.cell-renderer-mode.inert}:inert
+@end itemize
+
+
+@node cell-type
+@section cell-type
+@Enum cell-type
+Values: 
+@itemize
+@item @anchor{enum.cell-type.empty}:empty
+@item @anchor{enum.cell-type.pixmap}:pixmap
+@item @anchor{enum.cell-type.pixtext}:pixtext
+@item @anchor{enum.cell-type.text}:text
+@item @anchor{enum.cell-type.widget}:widget
+@end itemize
+
+
+@node corner-type
+@section corner-type
+@Enum corner-type
+Values: 
+@itemize
+@item @anchor{enum.corner-type.bottom-left}:bottom-left
+@item @anchor{enum.corner-type.bottom-right}:bottom-right
+@item @anchor{enum.corner-type.top-left}:top-left
+@item @anchor{enum.corner-type.top-right}:top-right
+@end itemize
+
+
+@node curve-type
+@section curve-type
+@Enum curve-type
+Values: 
+@itemize
+@item @anchor{enum.curve-type.free}:free
+@item @anchor{enum.curve-type.linear}:linear
+@item @anchor{enum.curve-type.spline}:spline
+@end itemize
+
+
+@node delete-type
+@section delete-type
+@Enum delete-type
+Values: 
+@itemize
+@item @anchor{enum.delete-type.chars}:chars
+@item @anchor{enum.delete-type.display-line-ends}:display-line-ends
+@item @anchor{enum.delete-type.display-lines}:display-lines
+@item @anchor{enum.delete-type.paragraph-ends}:paragraph-ends
+@item @anchor{enum.delete-type.paragraphs}:paragraphs
+@item @anchor{enum.delete-type.whitespace}:whitespace
+@item @anchor{enum.delete-type.word-ends}:word-ends
+@item @anchor{enum.delete-type.words}:words
+@end itemize
+
+
+@node direction-type
+@section direction-type
+@Enum direction-type
+Values: 
+@itemize
+@item @anchor{enum.direction-type.down}:down
+@item @anchor{enum.direction-type.left}:left
+@item @anchor{enum.direction-type.right}:right
+@item @anchor{enum.direction-type.tab-backward}:tab-backward
+@item @anchor{enum.direction-type.tab-forward}:tab-forward
+@item @anchor{enum.direction-type.up}:up
+@end itemize
+
+
+@node drag-result
+@section drag-result
+@Enum drag-result
+Values: 
+@itemize
+@item @anchor{enum.drag-result.error}:error
+@item @anchor{enum.drag-result.grab-broken}:grab-broken
+@item @anchor{enum.drag-result.no-target}:no-target
+@item @anchor{enum.drag-result.success}:success
+@item @anchor{enum.drag-result.timeout-expired}:timeout-expired
+@item @anchor{enum.drag-result.user-cancelled}:user-cancelled
+@end itemize
+
+@node entry-icon-position
+@section entry-icon-position
+@Enum entry-icon-position
+Values: 
+@itemize
+@item @anchor{enum.entry-icon-position.primary}:primary
+@item @anchor{enum.entry-icon-position.secondary}:secondary
+@end itemize
+
+@node expander-style
+@section expander-style
+@Enum expander-style
+Values: 
+@itemize
+@item @anchor{enum.expander-style.collapsed}:collapsed
+@item @anchor{enum.expander-style.expanded}:expanded
+@item @anchor{enum.expander-style.semi-collapsed}:semi-collapsed
+@item @anchor{enum.expander-style.semi-expanded}:semi-expanded
+@end itemize
+
+
+@node file-chooser-action
+@section file-chooser-action
+@Enum file-chooser-action
+Values: 
+@itemize
+@item @anchor{enum.file-chooser-action.create-folder}:create-folder
+@item @anchor{enum.file-chooser-action.open}:open
+@item @anchor{enum.file-chooser-action.save}:save
+@item @anchor{enum.file-chooser-action.select-folder}:select-folder
+@end itemize
+
+
+@node file-chooser-confirmation
+@section file-chooser-confirmation
+@Enum file-chooser-confirmation
+Values: 
+@itemize
+@item @anchor{enum.file-chooser-confirmation.accept-filename}:accept-filename
+@item @anchor{enum.file-chooser-confirmation.confirm}:confirm
+@item @anchor{enum.file-chooser-confirmation.select-again}:select-again
+@end itemize
+
+
+@node file-chooser-error
+@section file-chooser-error
+@Enum file-chooser-error
+Values: 
+@itemize
+@item @anchor{enum.file-chooser-error.already-exists}:already-exists
+@item @anchor{enum.file-chooser-error.bad-filename}:bad-filename
+@item @anchor{enum.file-chooser-error.incomplete-hostname}:incomplete-hostname
+@item @anchor{enum.file-chooser-error.nonexistent}:nonexistent
+@end itemize
+
+
+@node i-m-preedit-style
+@section i-m-preedit-style
+@Enum i-m-preedit-style
+Values: 
+@itemize
+@item @anchor{enum.i-m-preedit-style.callback}:callback
+@item @anchor{enum.i-m-preedit-style.none}:none
+@item @anchor{enum.i-m-preedit-style.nothing}:nothing
+@end itemize
+
+
+@node i-m-status-style
+@section i-m-status-style
+@Enum i-m-status-style
+Values: 
+@itemize
+@item @anchor{enum.i-m-status-style.callback}:callback
+@item @anchor{enum.i-m-status-style.none}:none
+@item @anchor{enum.i-m-status-style.nothing}:nothing
+@end itemize
+
+
+@node icon-size
+@section icon-size
+@Enum icon-size
+Values: 
+@itemize
+@item @anchor{enum.icon-size.button}:button
+@item @anchor{enum.icon-size.dialog}:dialog
+@item @anchor{enum.icon-size.dnd}:dnd
+@item @anchor{enum.icon-size.invalid}:invalid
+@item @anchor{enum.icon-size.large-toolbar}:large-toolbar
+@item @anchor{enum.icon-size.menu}:menu
+@item @anchor{enum.icon-size.small-toolbar}:small-toolbar
+@end itemize
+
+
+@node icon-theme-error
+@section icon-theme-error
+@Enum icon-theme-error
+Values: 
+@itemize
+@item @anchor{enum.icon-theme-error.failed}:failed
+@item @anchor{enum.icon-theme-error.not-found}:not-found
+@end itemize
+
+
+@node icon-view-drop-position
+@section icon-view-drop-position
+@Enum icon-view-drop-position
+Values: 
+@itemize
+@item @anchor{enum.icon-view-drop-position.drop-above}:drop-above
+@item @anchor{enum.icon-view-drop-position.drop-below}:drop-below
+@item @anchor{enum.icon-view-drop-position.drop-into}:drop-into
+@item @anchor{enum.icon-view-drop-position.drop-left}:drop-left
+@item @anchor{enum.icon-view-drop-position.drop-right}:drop-right
+@item @anchor{enum.icon-view-drop-position.no-drop}:no-drop
+@end itemize
+
+
+@node image-type
+@section image-type
+@Enum image-type
+Values: 
+@itemize
+@item @anchor{enum.image-type.animation}:animation
+@item @anchor{enum.image-type.empty}:empty
+@item @anchor{enum.image-type.gicon}:gicon
+@item @anchor{enum.image-type.icon-name}:icon-name
+@item @anchor{enum.image-type.icon-set}:icon-set
+@item @anchor{enum.image-type.image}:image
+@item @anchor{enum.image-type.pixbuf}:pixbuf
+@item @anchor{enum.image-type.pixmap}:pixmap
+@item @anchor{enum.image-type.stock}:stock
+@end itemize
+
+
+@node justification
+@section justification
+@Enum justification
+Values: 
+@itemize
+@item @anchor{enum.justification.center}:center
+@item @anchor{enum.justification.fill}:fill
+@item @anchor{enum.justification.left}:left
+@item @anchor{enum.justification.right}:right
+@end itemize
+
+
+@node match-type
+@section match-type
+@Enum match-type
+Values: 
+@itemize
+@item @anchor{enum.match-type.all}:all
+@item @anchor{enum.match-type.all-tail}:all-tail
+@item @anchor{enum.match-type.exact}:exact
+@item @anchor{enum.match-type.head}:head
+@item @anchor{enum.match-type.last}:last
+@item @anchor{enum.match-type.tail}:tail
+@end itemize
+
+
+@node menu-direction-type
+@section menu-direction-type
+@Enum menu-direction-type
+Values: 
+@itemize
+@item @anchor{enum.menu-direction-type.child}:child
+@item @anchor{enum.menu-direction-type.next}:next
+@item @anchor{enum.menu-direction-type.parent}:parent
+@item @anchor{enum.menu-direction-type.prev}:prev
+@end itemize
+
+
+@node message-type
+@section message-type
+@Enum message-type
+Values: 
+@itemize
+@item @anchor{enum.message-type.error}:error
+@item @anchor{enum.message-type.info}:info
+@item @anchor{enum.message-type.other}:other
+@item @anchor{enum.message-type.question}:question
+@item @anchor{enum.message-type.warning}:warning
+@end itemize
+
+
+@node metric-type
+@section metric-type
+@Enum metric-type
+Values: 
+@itemize
+@item @anchor{enum.metric-type.centimeters}:centimeters
+@item @anchor{enum.metric-type.inches}:inches
+@item @anchor{enum.metric-type.pixels}:pixels
+@end itemize
+
+
+@node movement-step
+@section movement-step
+@Enum movement-step
+Values: 
+@itemize
+@item @anchor{enum.movement-step.buffer-ends}:buffer-ends
+@item @anchor{enum.movement-step.display-line-ends}:display-line-ends
+@item @anchor{enum.movement-step.display-lines}:display-lines
+@item @anchor{enum.movement-step.horizontal-pages}:horizontal-pages
+@item @anchor{enum.movement-step.logical-positions}:logical-positions
+@item @anchor{enum.movement-step.pages}:pages
+@item @anchor{enum.movement-step.paragraph-ends}:paragraph-ends
+@item @anchor{enum.movement-step.paragraphs}:paragraphs
+@item @anchor{enum.movement-step.visual-positions}:visual-positions
+@item @anchor{enum.movement-step.words}:words
+@end itemize
+
+
+@node notebook-tab
+@section notebook-tab
+@Enum notebook-tab
+Values: 
+@itemize
+@item @anchor{enum.notebook-tab.first}:first
+@item @anchor{enum.notebook-tab.last}:last
+@end itemize
+
+
+@node number-up-layout
+@section number-up-layout
+@Enum number-up-layout
+Values: 
+@itemize
+@item @anchor{enum.number-up-layout.btlr}:btlr
+@item @anchor{enum.number-up-layout.btrl}:btrl
+@item @anchor{enum.number-up-layout.lrbt}:lrbt
+@item @anchor{enum.number-up-layout.lrtb}:lrtb
+@item @anchor{enum.number-up-layout.rlbt}:rlbt
+@item @anchor{enum.number-up-layout.rltb}:rltb
+@item @anchor{enum.number-up-layout.tblr}:tblr
+@item @anchor{enum.number-up-layout.tbrl}:tbrl
+@end itemize
+
+
+@node orientation
+@section orientation
+@Enum orientation
+Values: 
+@itemize
+@item @anchor{enum.orientation.horizontal}:horizontal
+@item @anchor{enum.orientation.vertical}:vertical
+@end itemize
+
+
+@node pack-direction
+@section pack-direction
+@Enum pack-direction
+Values: 
+@itemize
+@item @anchor{enum.pack-direction.btt}:btt
+@item @anchor{enum.pack-direction.ltr}:ltr
+@item @anchor{enum.pack-direction.rtl}:rtl
+@item @anchor{enum.pack-direction.ttb}:ttb
+@end itemize
+
+
+@node pack-type
+@section pack-type
+@Enum pack-type
+Values: 
+@itemize
+@item @anchor{enum.pack-type.end}:end
+@item @anchor{enum.pack-type.start}:start
+@end itemize
+
+
+@node page-orientation
+@section page-orientation
+@Enum page-orientation
+Values: 
+@itemize
+@item @anchor{enum.page-orientation.landscape}:landscape
+@item @anchor{enum.page-orientation.portrait}:portrait
+@item @anchor{enum.page-orientation.reverse-landscape}:reverse-landscape
+@item @anchor{enum.page-orientation.reverse-portrait}:reverse-portrait
+@end itemize
+
+
+@node page-set
+@section page-set
+@Enum page-set
+Values: 
+@itemize
+@item @anchor{enum.page-set.all}:all
+@item @anchor{enum.page-set.even}:even
+@item @anchor{enum.page-set.odd}:odd
+@end itemize
+
+
+@node path-priority-type
+@section path-priority-type
+@Enum path-priority-type
+Values: 
+@itemize
+@item @anchor{enum.path-priority-type.application}:application
+@item @anchor{enum.path-priority-type.gtk}:gtk
+@item @anchor{enum.path-priority-type.highest}:highest
+@item @anchor{enum.path-priority-type.lowest}:lowest
+@item @anchor{enum.path-priority-type.rc}:rc
+@item @anchor{enum.path-priority-type.theme}:theme
+@end itemize
+
+
+@node path-type
+@section path-type
+@Enum path-type
+Values: 
+@itemize
+@item @anchor{enum.path-type.class}:class
+@item @anchor{enum.path-type.widget}:widget
+@item @anchor{enum.path-type.widget-class}:widget-class
+@end itemize
+
+
+@node policy-type
+@section policy-type
+@Enum policy-type
+Values: 
+@itemize
+@item @anchor{enum.policy-type.always}:always
+@item @anchor{enum.policy-type.automatic}:automatic
+@item @anchor{enum.policy-type.never}:never
+@end itemize
+
+
+@node position-type
+@section position-type
+@Enum position-type
+Values: 
+@itemize
+@item @anchor{enum.position-type.bottom}:bottom
+@item @anchor{enum.position-type.left}:left
+@item @anchor{enum.position-type.right}:right
+@item @anchor{enum.position-type.top}:top
+@end itemize
+
+
+@node preview-type
+@section preview-type
+@Enum preview-type
+Values: 
+@itemize
+@item @anchor{enum.preview-type.color}:color
+@item @anchor{enum.preview-type.grayscale}:grayscale
+@end itemize
+
+
+@node print-duplex
+@section print-duplex
+@Enum print-duplex
+Values: 
+@itemize
+@item @anchor{enum.print-duplex.horizontal}:horizontal
+@item @anchor{enum.print-duplex.simplex}:simplex
+@item @anchor{enum.print-duplex.vertical}:vertical
+@end itemize
+
+
+@node print-error
+@section print-error
+@Enum print-error
+Values: 
+@itemize
+@item @anchor{enum.print-error.general}:general
+@item @anchor{enum.print-error.internal-error}:internal-error
+@item @anchor{enum.print-error.invalid-file}:invalid-file
+@item @anchor{enum.print-error.nomem}:nomem
+@end itemize
+
+
+@node print-operation-action
+@section print-operation-action
+@Enum print-operation-action
+Values: 
+@itemize
+@item @anchor{enum.print-operation-action.export}:export
+@item @anchor{enum.print-operation-action.preview}:preview
+@item @anchor{enum.print-operation-action.print}:print
+@item @anchor{enum.print-operation-action.print-dialog}:print-dialog
+@end itemize
+
+
+@node print-operation-result
+@section print-operation-result
+@Enum print-operation-result
+Values: 
+@itemize
+@item @anchor{enum.print-operation-result.apply}:apply
+@item @anchor{enum.print-operation-result.cancel}:cancel
+@item @anchor{enum.print-operation-result.error}:error
+@item @anchor{enum.print-operation-result.in-progress}:in-progress
+@end itemize
+
+
+@node print-pages
+@section print-pages
+@Enum print-pages
+Values: 
+@itemize
+@item @anchor{enum.print-pages.all}:all
+@item @anchor{enum.print-pages.current}:current
+@item @anchor{enum.print-pages.ranges}:ranges
+@end itemize
+
+
+@node print-quality
+@section print-quality
+@Enum print-quality
+Values: 
+@itemize
+@item @anchor{enum.print-quality.draft}:draft
+@item @anchor{enum.print-quality.high}:high
+@item @anchor{enum.print-quality.low}:low
+@item @anchor{enum.print-quality.normal}:normal
+@end itemize
+
+
+@node print-status
+@section print-status
+@Enum print-status
+Values: 
+@itemize
+@item @anchor{enum.print-status.finished}:finished
+@item @anchor{enum.print-status.finished-aborted}:finished-aborted
+@item @anchor{enum.print-status.generating-data}:generating-data
+@item @anchor{enum.print-status.initial}:initial
+@item @anchor{enum.print-status.pending}:pending
+@item @anchor{enum.print-status.pending-issue}:pending-issue
+@item @anchor{enum.print-status.preparing}:preparing
+@item @anchor{enum.print-status.printing}:printing
+@item @anchor{enum.print-status.sending-data}:sending-data
+@end itemize
+
+
+@node progress-bar-orientation
+@section progress-bar-orientation
+@Enum progress-bar-orientation
+Values: 
+@itemize
+@item @anchor{enum.progress-bar-orientation.bottom-to-top}:bottom-to-top
+@item @anchor{enum.progress-bar-orientation.left-to-right}:left-to-right
+@item @anchor{enum.progress-bar-orientation.right-to-left}:right-to-left
+@item @anchor{enum.progress-bar-orientation.top-to-bottom}:top-to-bottom
+@end itemize
+
+
+@node progress-bar-style
+@section progress-bar-style
+@Enum progress-bar-style
+Values: 
+@itemize
+@item @anchor{enum.progress-bar-style.continuous}:continuous
+@item @anchor{enum.progress-bar-style.discrete}:discrete
+@end itemize
+
+
+@node rc-token-type
+@section rc-token-type
+@Enum rc-token-type
+Values: 
+@itemize
+@item @anchor{enum.rc-token-type.active}:active
+@item @anchor{enum.rc-token-type.application}:application
+@item @anchor{enum.rc-token-type.base}:base
+@item @anchor{enum.rc-token-type.bg}:bg
+@item @anchor{enum.rc-token-type.bg-pixmap}:bg-pixmap
+@item @anchor{enum.rc-token-type.bind}:bind
+@item @anchor{enum.rc-token-type.binding}:binding
+@item @anchor{enum.rc-token-type.class}:class
+@item @anchor{enum.rc-token-type.color}:color
+@item @anchor{enum.rc-token-type.engine}:engine
+@item @anchor{enum.rc-token-type.fg}:fg
+@item @anchor{enum.rc-token-type.font}:font
+@item @anchor{enum.rc-token-type.font-name}:font-name
+@item @anchor{enum.rc-token-type.fontset}:fontset
+@item @anchor{enum.rc-token-type.gtk}:gtk
+@item @anchor{enum.rc-token-type.highest}:highest
+@item @anchor{enum.rc-token-type.im-module-file}:im-module-file
+@item @anchor{enum.rc-token-type.im-module-path}:im-module-path
+@item @anchor{enum.rc-token-type.include}:include
+@item @anchor{enum.rc-token-type.insensitive}:insensitive
+@item @anchor{enum.rc-token-type.invalid}:invalid
+@item @anchor{enum.rc-token-type.last}:last
+@item @anchor{enum.rc-token-type.lowest}:lowest
+@item @anchor{enum.rc-token-type.ltr}:ltr
+@item @anchor{enum.rc-token-type.module-path}:module-path
+@item @anchor{enum.rc-token-type.normal}:normal
+@item @anchor{enum.rc-token-type.pixmap-path}:pixmap-path
+@item @anchor{enum.rc-token-type.prelight}:prelight
+@item @anchor{enum.rc-token-type.rc}:rc
+@item @anchor{enum.rc-token-type.rtl}:rtl
+@item @anchor{enum.rc-token-type.selected}:selected
+@item @anchor{enum.rc-token-type.stock}:stock
+@item @anchor{enum.rc-token-type.style}:style
+@item @anchor{enum.rc-token-type.text}:text
+@item @anchor{enum.rc-token-type.theme}:theme
+@item @anchor{enum.rc-token-type.unbind}:unbind
+@item @anchor{enum.rc-token-type.widget}:widget
+@item @anchor{enum.rc-token-type.widget-class}:widget-class
+@item @anchor{enum.rc-token-type.xthickness}:xthickness
+@item @anchor{enum.rc-token-type.ythickness}:ythickness
+@end itemize
+
+
+@node recent-chooser-error
+@section recent-chooser-error
+@Enum recent-chooser-error
+Values: 
+@itemize
+@item @anchor{enum.recent-chooser-error.invalid-uri}:invalid-uri
+@item @anchor{enum.recent-chooser-error.not-found}:not-found
+@end itemize
+
+
+@node recent-manager-error
+@section recent-manager-error
+@Enum recent-manager-error
+Values: 
+@itemize
+@item @anchor{enum.recent-manager-error.invalid-encoding}:invalid-encoding
+@item @anchor{enum.recent-manager-error.invalid-uri}:invalid-uri
+@item @anchor{enum.recent-manager-error.not-found}:not-found
+@item @anchor{enum.recent-manager-error.not-registered}:not-registered
+@item @anchor{enum.recent-manager-error.read}:read
+@item @anchor{enum.recent-manager-error.unknown}:unknown
+@item @anchor{enum.recent-manager-error.write}:write
+@end itemize
+
+
+@node recent-sort-type
+@section recent-sort-type
+@Enum recent-sort-type
+Values: 
+@itemize
+@item @anchor{enum.recent-sort-type.custom}:custom
+@item @anchor{enum.recent-sort-type.lru}:lru
+@item @anchor{enum.recent-sort-type.mru}:mru
+@item @anchor{enum.recent-sort-type.none}:none
+@end itemize
+
+
+@node relief-style
+@section relief-style
+@Enum relief-style
+Values: 
+@itemize
+@item @anchor{enum.relief-style.half}:half
+@item @anchor{enum.relief-style.none}:none
+@item @anchor{enum.relief-style.normal}:normal
+@end itemize
+
+
+@node resize-mode
+@section resize-mode
+@Enum resize-mode
+Values: 
+@itemize
+@item @anchor{enum.resize-mode.immediate}:immediate
+@item @anchor{enum.resize-mode.parent}:parent
+@item @anchor{enum.resize-mode.queue}:queue
+@end itemize
+
+
+@node response-type
+@section response-type
+@Enum response-type
+Values: 
+@itemize
+@item @anchor{enum.response-type.accept}:accept
+@item @anchor{enum.response-type.apply}:apply
+@item @anchor{enum.response-type.cancel}:cancel
+@item @anchor{enum.response-type.close}:close
+@item @anchor{enum.response-type.delete-event}:delete-event
+@item @anchor{enum.response-type.help}:help
+@item @anchor{enum.response-type.no}:no
+@item @anchor{enum.response-type.none}:none
+@item @anchor{enum.response-type.ok}:ok
+@item @anchor{enum.response-type.reject}:reject
+@item @anchor{enum.response-type.yes}:yes
+@end itemize
+
+
+@node scroll-step
+@section scroll-step
+@Enum scroll-step
+Values: 
+@itemize
+@item @anchor{enum.scroll-step.ends}:ends
+@item @anchor{enum.scroll-step.horizontal-ends}:horizontal-ends
+@item @anchor{enum.scroll-step.horizontal-pages}:horizontal-pages
+@item @anchor{enum.scroll-step.horizontal-steps}:horizontal-steps
+@item @anchor{enum.scroll-step.pages}:pages
+@item @anchor{enum.scroll-step.steps}:steps
+@end itemize
+
+
+@node scroll-type
+@section scroll-type
+@Enum scroll-type
+Values: 
+@itemize
+@item @anchor{enum.scroll-type.end}:end
+@item @anchor{enum.scroll-type.jump}:jump
+@item @anchor{enum.scroll-type.none}:none
+@item @anchor{enum.scroll-type.page-backward}:page-backward
+@item @anchor{enum.scroll-type.page-down}:page-down
+@item @anchor{enum.scroll-type.page-forward}:page-forward
+@item @anchor{enum.scroll-type.page-left}:page-left
+@item @anchor{enum.scroll-type.page-right}:page-right
+@item @anchor{enum.scroll-type.page-up}:page-up
+@item @anchor{enum.scroll-type.start}:start
+@item @anchor{enum.scroll-type.step-backward}:step-backward
+@item @anchor{enum.scroll-type.step-down}:step-down
+@item @anchor{enum.scroll-type.step-forward}:step-forward
+@item @anchor{enum.scroll-type.step-left}:step-left
+@item @anchor{enum.scroll-type.step-right}:step-right
+@item @anchor{enum.scroll-type.step-up}:step-up
+@end itemize
+
+
+@node selection-mode
+@section selection-mode
+@Enum selection-mode
+Values: 
+@itemize
+@item @anchor{enum.selection-mode.browse}:browse
+@item @anchor{enum.selection-mode.extended}:extended
+@item @anchor{enum.selection-mode.multiple}:multiple
+@item @anchor{enum.selection-mode.none}:none
+@item @anchor{enum.selection-mode.single}:single
+@end itemize
+
+
+@node sensitivity-type
+@section sensitivity-type
+@Enum sensitivity-type
+Values: 
+@itemize
+@item @anchor{enum.sensitivity-type.auto}:auto
+@item @anchor{enum.sensitivity-type.off}:off
+@item @anchor{enum.sensitivity-type.on}:on
+@end itemize
+
+
+@node shadow-type
+@section shadow-type
+@Enum shadow-type
+Values: 
+@itemize
+@item @anchor{enum.shadow-type.etched-in}:etched-in
+@item @anchor{enum.shadow-type.etched-out}:etched-out
+@item @anchor{enum.shadow-type.in}:in
+@item @anchor{enum.shadow-type.none}:none
+@item @anchor{enum.shadow-type.out}:out
+@end itemize
+
+
+@node side-type
+@section side-type
+@Enum side-type
+Values: 
+@itemize
+@item @anchor{enum.side-type.bottom}:bottom
+@item @anchor{enum.side-type.left}:left
+@item @anchor{enum.side-type.right}:right
+@item @anchor{enum.side-type.top}:top
+@end itemize
+
+
+@node size-group-mode
+@section size-group-mode
+@Enum size-group-mode
+Values: 
+@itemize
+@item @anchor{enum.size-group-mode.both}:both
+@item @anchor{enum.size-group-mode.horizontal}:horizontal
+@item @anchor{enum.size-group-mode.none}:none
+@item @anchor{enum.size-group-mode.vertical}:vertical
+@end itemize
+
+
+@node sort-type
+@section sort-type
+@Enum sort-type
+Values: 
+@itemize
+@item @anchor{enum.sort-type.ascending}:ascending
+@item @anchor{enum.sort-type.descending}:descending
+@end itemize
+
+
+@node spin-button-update-policy
+@section spin-button-update-policy
+@Enum spin-button-update-policy
+Values: 
+@itemize
+@item @anchor{enum.spin-button-update-policy.always}:always
+@item @anchor{enum.spin-button-update-policy.if-valid}:if-valid
+@end itemize
+
+
+@node spin-type
+@section spin-type
+@Enum spin-type
+Values: 
+@itemize
+@item @anchor{enum.spin-type.end}:end
+@item @anchor{enum.spin-type.home}:home
+@item @anchor{enum.spin-type.page-backward}:page-backward
+@item @anchor{enum.spin-type.page-forward}:page-forward
+@item @anchor{enum.spin-type.step-backward}:step-backward
+@item @anchor{enum.spin-type.step-forward}:step-forward
+@item @anchor{enum.spin-type.user-defined}:user-defined
+@end itemize
+
+
+@node state-type
+@section state-type
+@Enum state-type
+Values: 
+@itemize
+@item @anchor{enum.state-type.active}:active
+@item @anchor{enum.state-type.insensitive}:insensitive
+@item @anchor{enum.state-type.normal}:normal
+@item @anchor{enum.state-type.prelight}:prelight
+@item @anchor{enum.state-type.selected}:selected
+@end itemize
+
+
+@node submenu-direction
+@section submenu-direction
+@Enum submenu-direction
+Values: 
+@itemize
+@item @anchor{enum.submenu-direction.left}:left
+@item @anchor{enum.submenu-direction.right}:right
+@end itemize
+
+
+@node submenu-placement
+@section submenu-placement
+@Enum submenu-placement
+Values: 
+@itemize
+@item @anchor{enum.submenu-placement.left-right}:left-right
+@item @anchor{enum.submenu-placement.top-bottom}:top-bottom
+@end itemize
+
+
+@node text-buffer-target-info
+@section text-buffer-target-info
+@Enum text-buffer-target-info
+Values: 
+@itemize
+@item @anchor{enum.text-buffer-target-info.buffer-contents}:buffer-contents
+@item @anchor{enum.text-buffer-target-info.rich-text}:rich-text
+@item @anchor{enum.text-buffer-target-info.text}:text
+@end itemize
+
+
+@node text-direction
+@section text-direction
+@Enum text-direction
+Values: 
+@itemize
+@item @anchor{enum.text-direction.ltr}:ltr
+@item @anchor{enum.text-direction.none}:none
+@item @anchor{enum.text-direction.rtl}:rtl
+@end itemize
+
+
+@node text-window-type
+@section text-window-type
+@Enum text-window-type
+Values: 
+@itemize
+@item @anchor{enum.text-window-type.bottom}:bottom
+@item @anchor{enum.text-window-type.left}:left
+@item @anchor{enum.text-window-type.private}:private
+@item @anchor{enum.text-window-type.right}:right
+@item @anchor{enum.text-window-type.text}:text
+@item @anchor{enum.text-window-type.top}:top
+@item @anchor{enum.text-window-type.widget}:widget
+@end itemize
+
+
+@node toolbar-child-type
+@section toolbar-child-type
+@Enum toolbar-child-type
+Values: 
+@itemize
+@item @anchor{enum.toolbar-child-type.button}:button
+@item @anchor{enum.toolbar-child-type.radiobutton}:radiobutton
+@item @anchor{enum.toolbar-child-type.space}:space
+@item @anchor{enum.toolbar-child-type.togglebutton}:togglebutton
+@item @anchor{enum.toolbar-child-type.widget}:widget
+@end itemize
+
+
+@node toolbar-space-style
+@section toolbar-space-style
+@Enum toolbar-space-style
+Values: 
+@itemize
+@item @anchor{enum.toolbar-space-style.empty}:empty
+@item @anchor{enum.toolbar-space-style.line}:line
+@end itemize
+
+
+@node toolbar-style
+@section toolbar-style
+@Enum toolbar-style
+Values: 
+@itemize
+@item @anchor{enum.toolbar-style.both}:both
+@item @anchor{enum.toolbar-style.both-horiz}:both-horiz
+@item @anchor{enum.toolbar-style.icons}:icons
+@item @anchor{enum.toolbar-style.text}:text
+@end itemize
+
+
+@node tree-view-column-sizing
+@section tree-view-column-sizing
+@Enum tree-view-column-sizing
+Values: 
+@itemize
+@item @anchor{enum.tree-view-column-sizing.autosize}:autosize
+@item @anchor{enum.tree-view-column-sizing.fixed}:fixed
+@item @anchor{enum.tree-view-column-sizing.grow-only}:grow-only
+@end itemize
+
+
+@node tree-view-drop-position
+@section tree-view-drop-position
+@Enum tree-view-drop-position
+Values: 
+@itemize
+@item @anchor{enum.tree-view-drop-position.after}:after
+@item @anchor{enum.tree-view-drop-position.before}:before
+@item @anchor{enum.tree-view-drop-position.into-or-after}:into-or-after
+@item @anchor{enum.tree-view-drop-position.into-or-before}:into-or-before
+@end itemize
+
+
+@node tree-view-grid-lines
+@section tree-view-grid-lines
+@Enum tree-view-grid-lines
+Values: 
+@itemize
+@item @anchor{enum.tree-view-grid-lines.both}:both
+@item @anchor{enum.tree-view-grid-lines.horizontal}:horizontal
+@item @anchor{enum.tree-view-grid-lines.none}:none
+@item @anchor{enum.tree-view-grid-lines.vertical}:vertical
+@end itemize
+
+
+@node tree-view-mode
+@section tree-view-mode
+@Enum tree-view-mode
+Values: 
+@itemize
+@item @anchor{enum.tree-view-mode.item}:item
+@item @anchor{enum.tree-view-mode.line}:line
+@end itemize
+
+
+@node unit
+@section unit
+@Enum unit
+Values: 
+@itemize
+@item @anchor{enum.unit.inch}:inch
+@item @anchor{enum.unit.mm}:mm
+@item @anchor{enum.unit.pixel}:pixel
+@item @anchor{enum.unit.points}:points
+@end itemize
+
+
+@node update-type
+@section update-type
+@Enum update-type
+Values: 
+@itemize
+@item @anchor{enum.update-type.continuous}:continuous
+@item @anchor{enum.update-type.delayed}:delayed
+@item @anchor{enum.update-type.discontinuous}:discontinuous
+@end itemize
+
+
+@node visibility
+@section visibility
+@Enum visibility
+Values: 
+@itemize
+@item @anchor{enum.visibility.full}:full
+@item @anchor{enum.visibility.none}:none
+@item @anchor{enum.visibility.partial}:partial
+@end itemize
+
+
+@node widget-help-type
+@section widget-help-type
+@Enum widget-help-type
+Values: 
+@itemize
+@item @anchor{enum.widget-help-type.tooltip}:tooltip
+@item @anchor{enum.widget-help-type.whats-this}:whats-this
+@end itemize
+
+
+@node window-position
+@section window-position
+@Enum window-position
+Values: 
+@itemize
+@item @anchor{enum.window-position.center}:center
+@item @anchor{enum.window-position.center-always}:center-always
+@item @anchor{enum.window-position.center-on-parent}:center-on-parent
+@item @anchor{enum.window-position.mouse}:mouse
+@item @anchor{enum.window-position.none}:none
+@end itemize
+
+
+@node window-type
+@section window-type
+@Enum window-type
+Values: 
+@itemize
+@item @anchor{enum.window-type.popup}:popup
+@item @anchor{enum.window-type.toplevel}:toplevel
+@end itemize
+
+
+@node wrap-mode
+@section wrap-mode
+@Enum wrap-mode
+Values: 
+@itemize
+@item @anchor{enum.wrap-mode.char}:char
+@item @anchor{enum.wrap-mode.none}:none
+@item @anchor{enum.wrap-mode.word}:word
+@item @anchor{enum.wrap-mode.word-char}:word-char
+@end itemize
+
+
+@node pango-wrap-mode
+@section pango-wrap-mode
+@Enum pango-wrap-mode
+Values: 
+@itemize
+@item @anchor{enum.pango-wrap-mode.char}:char
+@item @anchor{enum.pango-wrap-mode.word}:word
+@item @anchor{enum.pango-wrap-mode.word-char}:word-char
+@end itemize
+
+@node pango-ellipsize-mode
+@section pango-ellipsize-mode
+@Enum pango-ellipsize-mode
+Values: 
+@itemize
+@item @anchor{enum.pango-ellipsize-mode.end}:end
+@item @anchor{enum.pango-ellipsize-mode.middle}:middle
+@item @anchor{enum.pango-ellipsize-mode.none}:none
+@item @anchor{enum.pango-ellipsize-mode.start}:start
+@end itemize

@@ -1,0 +1,335 @@
+@menu
+* colorspace::
+* crossing-mode::
+* cursor-type::
+* event-type::
+* font-type::
+* gdk-extension-mode::
+* gdk-window-type-hint::
+* grab-status::
+* gravity::
+* notify-type::
+* owner-change::
+* property-state::
+* scroll-direction::
+* setting-action::
+* visibility-state::
+* window-edge::
+@end menu
+
+@node colorspace
+@section colorspace
+@Enum colorspace
+Values: 
+@itemize
+@item @anchor{enum.colorspace.rgb}:rgb
+@end itemize
+
+
+@node crossing-mode
+@section crossing-mode
+@Enum crossing-mode
+Values: 
+@itemize
+@item @anchor{enum.crossing-mode.grab}:grab
+@item @anchor{enum.crossing-mode.gtk-grab}:gtk-grab
+@item @anchor{enum.crossing-mode.gtk-ungrab}:gtk-ungrab
+@item @anchor{enum.crossing-mode.normal}:normal
+@item @anchor{enum.crossing-mode.state-changed}:state-changed
+@item @anchor{enum.crossing-mode.ungrab}:ungrab
+@end itemize
+
+
+@node cursor-type
+@section cursor-type
+@Enum cursor-type
+Values: 
+@itemize
+@item @anchor{enum.cursor-type.arrow}:arrow
+@item @anchor{enum.cursor-type.based-arrow-down}:based-arrow-down
+@item @anchor{enum.cursor-type.based-arrow-up}:based-arrow-up
+@item @anchor{enum.cursor-type.blank-cursor}:blank-cursor
+@item @anchor{enum.cursor-type.boat}:boat
+@item @anchor{enum.cursor-type.bogosity}:bogosity
+@item @anchor{enum.cursor-type.bottom-left-corner}:bottom-left-corner
+@item @anchor{enum.cursor-type.bottom-right-corner}:bottom-right-corner
+@item @anchor{enum.cursor-type.bottom-side}:bottom-side
+@item @anchor{enum.cursor-type.bottom-tee}:bottom-tee
+@item @anchor{enum.cursor-type.box-spiral}:box-spiral
+@item @anchor{enum.cursor-type.center-ptr}:center-ptr
+@item @anchor{enum.cursor-type.circle}:circle
+@item @anchor{enum.cursor-type.clock}:clock
+@item @anchor{enum.cursor-type.coffee-mug}:coffee-mug
+@item @anchor{enum.cursor-type.cross}:cross
+@item @anchor{enum.cursor-type.cross-reverse}:cross-reverse
+@item @anchor{enum.cursor-type.crosshair}:crosshair
+@item @anchor{enum.cursor-type.cursor-is-pixmap}:cursor-is-pixmap
+@item @anchor{enum.cursor-type.diamond-cross}:diamond-cross
+@item @anchor{enum.cursor-type.dot}:dot
+@item @anchor{enum.cursor-type.dotbox}:dotbox
+@item @anchor{enum.cursor-type.double-arrow}:double-arrow
+@item @anchor{enum.cursor-type.draft-large}:draft-large
+@item @anchor{enum.cursor-type.draft-small}:draft-small
+@item @anchor{enum.cursor-type.draped-box}:draped-box
+@item @anchor{enum.cursor-type.exchange}:exchange
+@item @anchor{enum.cursor-type.fleur}:fleur
+@item @anchor{enum.cursor-type.gobbler}:gobbler
+@item @anchor{enum.cursor-type.gumby}:gumby
+@item @anchor{enum.cursor-type.hand1}:hand1
+@item @anchor{enum.cursor-type.hand2}:hand2
+@item @anchor{enum.cursor-type.heart}:heart
+@item @anchor{enum.cursor-type.icon}:icon
+@item @anchor{enum.cursor-type.iron-cross}:iron-cross
+@item @anchor{enum.cursor-type.last-cursor}:last-cursor
+@item @anchor{enum.cursor-type.left-ptr}:left-ptr
+@item @anchor{enum.cursor-type.left-side}:left-side
+@item @anchor{enum.cursor-type.left-tee}:left-tee
+@item @anchor{enum.cursor-type.leftbutton}:leftbutton
+@item @anchor{enum.cursor-type.ll-angle}:ll-angle
+@item @anchor{enum.cursor-type.lr-angle}:lr-angle
+@item @anchor{enum.cursor-type.man}:man
+@item @anchor{enum.cursor-type.middlebutton}:middlebutton
+@item @anchor{enum.cursor-type.mouse}:mouse
+@item @anchor{enum.cursor-type.pencil}:pencil
+@item @anchor{enum.cursor-type.pirate}:pirate
+@item @anchor{enum.cursor-type.plus}:plus
+@item @anchor{enum.cursor-type.question-arrow}:question-arrow
+@item @anchor{enum.cursor-type.right-ptr}:right-ptr
+@item @anchor{enum.cursor-type.right-side}:right-side
+@item @anchor{enum.cursor-type.right-tee}:right-tee
+@item @anchor{enum.cursor-type.rightbutton}:rightbutton
+@item @anchor{enum.cursor-type.rtl-logo}:rtl-logo
+@item @anchor{enum.cursor-type.sailboat}:sailboat
+@item @anchor{enum.cursor-type.sb-down-arrow}:sb-down-arrow
+@item @anchor{enum.cursor-type.sb-h-double-arrow}:sb-h-double-arrow
+@item @anchor{enum.cursor-type.sb-left-arrow}:sb-left-arrow
+@item @anchor{enum.cursor-type.sb-right-arrow}:sb-right-arrow
+@item @anchor{enum.cursor-type.sb-up-arrow}:sb-up-arrow
+@item @anchor{enum.cursor-type.sb-v-double-arrow}:sb-v-double-arrow
+@item @anchor{enum.cursor-type.shuttle}:shuttle
+@item @anchor{enum.cursor-type.sizing}:sizing
+@item @anchor{enum.cursor-type.spider}:spider
+@item @anchor{enum.cursor-type.spraycan}:spraycan
+@item @anchor{enum.cursor-type.star}:star
+@item @anchor{enum.cursor-type.target}:target
+@item @anchor{enum.cursor-type.tcross}:tcross
+@item @anchor{enum.cursor-type.top-left-arrow}:top-left-arrow
+@item @anchor{enum.cursor-type.top-left-corner}:top-left-corner
+@item @anchor{enum.cursor-type.top-right-corner}:top-right-corner
+@item @anchor{enum.cursor-type.top-side}:top-side
+@item @anchor{enum.cursor-type.top-tee}:top-tee
+@item @anchor{enum.cursor-type.trek}:trek
+@item @anchor{enum.cursor-type.ul-angle}:ul-angle
+@item @anchor{enum.cursor-type.umbrella}:umbrella
+@item @anchor{enum.cursor-type.ur-angle}:ur-angle
+@item @anchor{enum.cursor-type.watch}:watch
+@item @anchor{enum.cursor-type.x-cursor}:x-cursor
+@item @anchor{enum.cursor-type.xterm}:xterm
+@end itemize
+
+
+@node event-type
+@section event-type
+@Enum event-type
+Values: 
+@itemize
+@item @anchor{enum.event-type.2button-press}:2button-press
+@item @anchor{enum.event-type.3button-press}:3button-press
+@item @anchor{enum.event-type.button-press}:button-press
+@item @anchor{enum.event-type.button-release}:button-release
+@item @anchor{enum.event-type.client-event}:client-event
+@item @anchor{enum.event-type.configure}:configure
+@item @anchor{enum.event-type.damage}:damage
+@item @anchor{enum.event-type.delete}:delete
+@item @anchor{enum.event-type.destroy}:destroy
+@item @anchor{enum.event-type.drag-enter}:drag-enter
+@item @anchor{enum.event-type.drag-leave}:drag-leave
+@item @anchor{enum.event-type.drag-motion}:drag-motion
+@item @anchor{enum.event-type.drag-status}:drag-status
+@item @anchor{enum.event-type.drop-finished}:drop-finished
+@item @anchor{enum.event-type.drop-start}:drop-start
+@item @anchor{enum.event-type.enter-notify}:enter-notify
+@item @anchor{enum.event-type.expose}:expose
+@item @anchor{enum.event-type.focus-change}:focus-change
+@item @anchor{enum.event-type.grab-broken}:grab-broken
+@item @anchor{enum.event-type.key-press}:key-press
+@item @anchor{enum.event-type.key-release}:key-release
+@item @anchor{enum.event-type.leave-notify}:leave-notify
+@item @anchor{enum.event-type.map}:map
+@item @anchor{enum.event-type.motion-notify}:motion-notify
+@item @anchor{enum.event-type.no-expose}:no-expose
+@item @anchor{enum.event-type.nothing}:nothing
+@item @anchor{enum.event-type.owner-change}:owner-change
+@item @anchor{enum.event-type.property-notify}:property-notify
+@item @anchor{enum.event-type.proximity-in}:proximity-in
+@item @anchor{enum.event-type.proximity-out}:proximity-out
+@item @anchor{enum.event-type.scroll}:scroll
+@item @anchor{enum.event-type.selection-clear}:selection-clear
+@item @anchor{enum.event-type.selection-notify}:selection-notify
+@item @anchor{enum.event-type.selection-request}:selection-request
+@item @anchor{enum.event-type.setting}:setting
+@item @anchor{enum.event-type.unmap}:unmap
+@item @anchor{enum.event-type.visibility-notify}:visibility-notify
+@item @anchor{enum.event-type.window-state}:window-state
+@end itemize
+
+
+@node font-type
+@section font-type
+@Enum font-type
+Values: 
+@itemize
+@item @anchor{enum.font-type.font}:font
+@item @anchor{enum.font-type.fontset}:fontset
+@end itemize
+
+
+@node gdk-extension-mode
+@section gdk-extension-mode
+@Enum gdk-extension-mode
+Values: 
+@itemize
+@item @anchor{enum.gdk-extension-mode.all}:all
+@item @anchor{enum.gdk-extension-mode.cursor}:cursor
+@item @anchor{enum.gdk-extension-mode.none}:none
+@end itemize
+
+
+@node gdk-window-type-hint
+@section gdk-window-type-hint
+@Enum gdk-window-type-hint
+Values: 
+@itemize
+@item @anchor{enum.gdk-window-type-hint.combo}:combo
+@item @anchor{enum.gdk-window-type-hint.desktop}:desktop
+@item @anchor{enum.gdk-window-type-hint.dialog}:dialog
+@item @anchor{enum.gdk-window-type-hint.dnd}:dnd
+@item @anchor{enum.gdk-window-type-hint.dock}:dock
+@item @anchor{enum.gdk-window-type-hint.dropdown-menu}:dropdown-menu
+@item @anchor{enum.gdk-window-type-hint.menu}:menu
+@item @anchor{enum.gdk-window-type-hint.normal}:normal
+@item @anchor{enum.gdk-window-type-hint.notification}:notification
+@item @anchor{enum.gdk-window-type-hint.popup-menu}:popup-menu
+@item @anchor{enum.gdk-window-type-hint.splashscreen}:splashscreen
+@item @anchor{enum.gdk-window-type-hint.toolbar}:toolbar
+@item @anchor{enum.gdk-window-type-hint.tooltip}:tooltip
+@item @anchor{enum.gdk-window-type-hint.utility}:utility
+@end itemize
+
+
+@node grab-status
+@section grab-status
+@Enum grab-status
+Values: 
+@itemize
+@item @anchor{enum.grab-status.already-grabbed}:already-grabbed
+@item @anchor{enum.grab-status.frozen}:frozen
+@item @anchor{enum.grab-status.invalid-time}:invalid-time
+@item @anchor{enum.grab-status.not-viewable}:not-viewable
+@item @anchor{enum.grab-status.success}:success
+@end itemize
+
+
+@node gravity
+@section gravity
+@Enum gravity
+Values: 
+@itemize
+@item @anchor{enum.gravity.center}:center
+@item @anchor{enum.gravity.east}:east
+@item @anchor{enum.gravity.north}:north
+@item @anchor{enum.gravity.north-east}:north-east
+@item @anchor{enum.gravity.north-west}:north-west
+@item @anchor{enum.gravity.south}:south
+@item @anchor{enum.gravity.south-east}:south-east
+@item @anchor{enum.gravity.south-west}:south-west
+@item @anchor{enum.gravity.static}:static
+@item @anchor{enum.gravity.west}:west
+@end itemize
+
+
+@node notify-type
+@section notify-type
+@Enum notify-type
+Values: 
+@itemize
+@item @anchor{enum.notify-type.ancestor}:ancestor
+@item @anchor{enum.notify-type.inferior}:inferior
+@item @anchor{enum.notify-type.nonlinear}:nonlinear
+@item @anchor{enum.notify-type.nonlinear-virtual}:nonlinear-virtual
+@item @anchor{enum.notify-type.unknown}:unknown
+@item @anchor{enum.notify-type.virtual}:virtual
+@end itemize
+
+
+@node owner-change
+@section owner-change
+@Enum owner-change
+Values: 
+@itemize
+@item @anchor{enum.owner-change.close}:close
+@item @anchor{enum.owner-change.destroy}:destroy
+@item @anchor{enum.owner-change.new-owner}:new-owner
+@end itemize
+
+
+@node property-state
+@section property-state
+@Enum property-state
+Values: 
+@itemize
+@item @anchor{enum.property-state.delete}:delete
+@item @anchor{enum.property-state.new-value}:new-value
+@end itemize
+
+
+@node scroll-direction
+@section scroll-direction
+@Enum scroll-direction
+Values: 
+@itemize
+@item @anchor{enum.scroll-direction.down}:down
+@item @anchor{enum.scroll-direction.left}:left
+@item @anchor{enum.scroll-direction.right}:right
+@item @anchor{enum.scroll-direction.up}:up
+@end itemize
+
+
+@node setting-action
+@section setting-action
+@Enum setting-action
+Values: 
+@itemize
+@item @anchor{enum.setting-action.changed}:changed
+@item @anchor{enum.setting-action.deleted}:deleted
+@item @anchor{enum.setting-action.new}:new
+@end itemize
+
+
+@node visibility-state
+@section visibility-state
+@Enum visibility-state
+Values: 
+@itemize
+@item @anchor{enum.visibility-state.fully-obscured}:fully-obscured
+@item @anchor{enum.visibility-state.partial}:partial
+@item @anchor{enum.visibility-state.unobscured}:unobscured
+@end itemize
+
+
+@node window-edge
+@section window-edge
+@Enum window-edge
+Values: 
+@itemize
+@item @anchor{enum.window-edge.east}:east
+@item @anchor{enum.window-edge.north}:north
+@item @anchor{enum.window-edge.north-east}:north-east
+@item @anchor{enum.window-edge.north-west}:north-west
+@item @anchor{enum.window-edge.south}:south
+@item @anchor{enum.window-edge.south-east}:south-east
+@item @anchor{enum.window-edge.south-west}:south-west
+@item @anchor{enum.window-edge.west}:west
+@end itemize
+
+

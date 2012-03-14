@@ -1,0 +1,395 @@
+@menu
+* activatable::
+* atk-implementor-iface::
+* buildable::
+* cell-editable::
+* cell-layout::
+* editable::
+* file-chooser::
+* file-chooser-embed::
+* orientable::
+* print-operation-preview::
+* recent-chooser::
+* tool-shell::
+* tree-drag-dest::
+* tree-drag-source::
+* tree-model::
+* tree-sortable::
+@end menu
+
+@node activatable
+@section activatable
+@Class activatable
+
+
+Slots:
+@itemize
+@item @anchor{slot.activatable.related-action}related-action. Type: @ref{action}. Accessor: @anchor{fn.activatable-related-action}@code{activatable-related-action}.
+@item @anchor{slot.activatable.use-action-appearance}use-action-appearance. Type: @code{boolean}. Accessor: @anchor{fn.activatable-use-action-appearance}@code{activatable-use-action-appearance}.
+@end itemize
+
+
+Signals:
+@itemize
+@end itemize
+
+
+@node atk-implementor-iface
+@section atk-implementor-iface
+@Class atk-implementor-iface
+
+
+Slots:
+@itemize
+@end itemize
+
+
+Signals:
+@itemize
+@end itemize
+
+
+@node buildable
+@section buildable
+@Class buildable
+
+
+Slots:
+@itemize
+@end itemize
+
+
+Signals:
+@itemize
+@end itemize
+
+
+@node cell-editable
+@section cell-editable
+@Class cell-editable
+
+
+Slots:
+@itemize
+@end itemize
+
+
+Signals:
+@itemize
+@item @anchor{signal.cell-editable.editing-done}"editing-done". Signature: (instance @ref{cell-editable}) @result{} void. Options: run-last.
+@item @anchor{signal.cell-editable.remove-widget}"remove-widget". Signature: (instance @ref{cell-editable}) @result{} void. Options: run-last.
+@end itemize
+
+
+@node cell-layout
+@section cell-layout
+@Class cell-layout
+
+
+Slots:
+@itemize
+@end itemize
+
+
+Signals:
+@itemize
+@end itemize
+
+
+@node editable
+@section editable
+@Class editable
+
+The @ref{editable} interface is an interface which should be implemented by text editing widgets, such as @ref{entry}. It contains functions for generically manipulating an editable widget, a large number of action signals used for key bindings, and several signals that an application can connect to to modify the behavior of a widget.
+
+Slots:
+@itemize
+@item @anchor{slot.editable.editable}editable. Type: @code{boolean}. Accessor: @anchor{fn.editable-editable}@code{editable-editable}.
+
+Whether the user can edit the text in the editable widget or not.
+@item @anchor{slot.editable.position}position. Type: @code{integer}. Accessor: @anchor{fn.editable-position}@code{editable-position}.
+
+The cursor position in the editable.
+
+The cursor is displayed before the character with the given (base 0) index in the contents of the editable. The value must be less than or equal to the number of characters in the editable. A value of -1 indicates that the position should be set after the last character of the editable. Note that position is in characters, not in bytes.
+@end itemize
+
+
+Signals:
+@itemize
+@item @anchor{signal.editable.changed}"changed". Signature: (instance @ref{editable}) @result{} void. Options: run-last.
+
+This signal is emitted at the end of a single user-visible operation on the contents of the @ref{editable}.
+
+E.g., a paste operation that replaces the contents of the selection will cause only one signal emission (even though it is implemented by first deleting the selection, then inserting the new content, and may cause multiple @code{::notify::text} signals to be emitted).
+@item @anchor{signal.editable.delete-text}"delete-text". Signature: (instance @ref{editable}), (starting-position @code{integer}), (end-position @code{integer}) @result{} void. Options: run-last.
+
+This signal is emitted when text is deleted from the widget by the user. The default handler for this signal will normally be responsible for deleting the text, so by connecting to this signal and then stopping the signal with @code{g_signal_stop_emission} (TODO), it is possible to modify the range of deleted text, or prevent it from being deleted entirely. The start_pos and end_pos parameters are interpreted as for @ref{editable-delete-text}.
+@item @anchor{signal.editable.insert-text}"insert-text". Signature: (instance @ref{editable}), (new-text @code{string}), (new-text-length @code{integer}), (position gpointer) @result{} void. Options: run-last.
+
+This signal is emitted when text is inserted into the widget by the user. The default handler for this signal will normally be responsible for inserting the text, so by connecting to this signal and then stopping the signal with g_signal_stop_emission(), it is possible to modify the inserted text, or prevent it from being inserted entirely.
+
+@var{position}: a pointer to the position (of the CFFI foreign type @code{:integer}), in characters, at which to insert the new text. After the signal emission is finished, it should point after the newly inserted text.
+@end itemize
+
+@RMethod editable-select-region
+@lisp
+(editable-select-region editable start end)
+@end lisp
+
+Selects a region of text in @var{editable}. The characters that are selected are those characters at positions from @var{start} (an integer) up to, but not including @var{end} (an integer). If @var{end} is negative, then the the characters selected are those characters from @var{start} to the end of the text.
+
+Note that positions are specified in characters, not bytes.
+
+@RMethod editable-selection
+@lisp
+(editable-selection editable) @result{} (values selected-p start end)
+@end lisp
+
+Retrieves the selection bounds of the @var{editable}. @var{selected-p} is a @code{boolean} specifying whether there is a selection, @var{start} is the start of the selection and @var{end} is the end of the selection. If no text was selected, @var{start} and @var{end} will be identical and @var{selected-p} will be @code{NIL}.
+
+Note that positions are specified in characters, not bytes.
+
+@RMethod editable-insert-text
+@lisp
+(editable-insert-text editable text position) @result{} new-position
+@end lisp
+
+Inserts the @var{text} (a string) into the contents of the @var{editable}, at position specified by @var{position} (an integer). Returns the position after the inserted text.
+
+Note that the position is in characters, not in bytes.
+
+@RMethod editable-delete-text
+@lisp
+(editable-delete-text editable start end)
+@end lisp
+
+Deletes a sequence of characters. The characters that are deleted are those characters at positions from @var{start} up to, but not including @var{end}. If @var{end} is negative, then the the characters deleted are those from @var{start} to the end of the text.
+
+Note that the positions are specified in characters, not bytes.
+
+@RMethod editable-get-chars
+@lisp
+(editable-get-chars editable &key (start 0) (end -1)) @result{} string
+@end lisp
+
+Retrieves a substring from @var{editable} contents. The characters that are retrieved are those characters at positions from @var{start} up to, but not including @var{end}. If @var{end} is negative, then the the characters retrieved are those characters from @var{start} to the end of the text.
+
+@RMethod editable-cut-clipboard
+@lisp
+(editable-cut-clipboard editable)
+@end lisp
+
+Removes the contents of the currently selected content in the @var{editable} and puts it on the clipboard.
+
+@RMethod editable-copy-clipboard
+@lisp
+(editable-copy-clipboard editable)
+@end lisp
+
+Copies the contents of the currently selected content in the @var{editable} and puts it on the clipboard.
+
+@RMethod editable-paste-clipboard
+@lisp
+(editable-paste-clipboard editable)
+@end lisp
+
+Pastes the content of the clipboard to the current position of the cursor in the @var{editable}.
+
+
+@node file-chooser
+@section file-chooser
+@Class file-chooser
+
+
+Slots:
+@itemize
+@item @anchor{slot.file-chooser.action}action. Type: @ref{file-chooser-action}. Accessor: @anchor{fn.file-chooser-action}@code{file-chooser-action}.
+@item @anchor{slot.file-chooser.current-folder}current-folder. Type: @code{string}. Accessor: @anchor{fn.file-chooser-current-folder}@code{file-chooser-current-folder}.
+@item @anchor{slot.file-chooser.current-folder-uri}current-folder-uri. Type: @code{string}. Accessor: @anchor{fn.file-chooser-current-folder-uri}@code{file-chooser-current-folder-uri}.
+@item @anchor{slot.file-chooser.current-name}current-name. Type: @code{string}. Accessor: @anchor{fn.file-chooser-current-name}@code{file-chooser-current-name}. Write-only.
+@item @anchor{slot.file-chooser.do-overwrite-confirmation}do-overwrite-confirmation. Type: @code{boolean}. Accessor: @anchor{fn.file-chooser-do-overwrite-confirmation}@code{file-chooser-do-overwrite-confirmation}.
+@item @anchor{slot.file-chooser.extra-widget}extra-widget. Type: @ref{widget}. Accessor: @anchor{fn.file-chooser-extra-widget}@code{file-chooser-extra-widget}.
+@item @anchor{slot.file-chooser.file-system-backend}file-system-backend. Type: @code{string}. Accessor: @anchor{fn.file-chooser-file-system-backend}@code{file-chooser-file-system-backend}. Write-only.
+@item @anchor{slot.file-chooser.filename}filename. Type: @code{string}. Accessor: @anchor{fn.file-chooser-filename}@code{file-chooser-filename}.
+@item @anchor{slot.file-chooser.filter}filter. Type: @ref{file-filter}. Accessor: @anchor{fn.file-chooser-filter}@code{file-chooser-filter}.
+@item @anchor{slot.file-chooser.local-only}local-only. Type: @code{boolean}. Accessor: @anchor{fn.file-chooser-local-only}@code{file-chooser-local-only}.
+@item @anchor{slot.file-chooser.preview-filename}preview-filename. Type: @code{string}. Accessor: @anchor{fn.file-chooser-preview-filename}@code{file-chooser-preview-filename}. Read-only.
+@item @anchor{slot.file-chooser.preview-uri}preview-uri. Type: @code{string}. Accessor: @anchor{fn.file-chooser-preview-uri}@code{file-chooser-preview-uri}. Read-only.
+@item @anchor{slot.file-chooser.preview-widget}preview-widget. Type: @ref{widget}. Accessor: @anchor{fn.file-chooser-preview-widget}@code{file-chooser-preview-widget}.
+@item @anchor{slot.file-chooser.preview-widget-active}preview-widget-active. Type: @code{boolean}. Accessor: @anchor{fn.file-chooser-preview-widget-active}@code{file-chooser-preview-widget-active}.
+@item @anchor{slot.file-chooser.select-multiple}select-multiple. Type: @code{boolean}. Accessor: @anchor{fn.file-chooser-select-multiple}@code{file-chooser-select-multiple}.
+@item @anchor{slot.file-chooser.show-hidden}show-hidden. Type: @code{boolean}. Accessor: @anchor{fn.file-chooser-show-hidden}@code{file-chooser-show-hidden}.
+@item @anchor{slot.file-chooser.uri}uri. Type: @code{string}. Accessor: @anchor{fn.file-chooser-uri}@code{file-chooser-uri}.
+@item @anchor{slot.file-chooser.use-preview-label}use-preview-label. Type: @code{boolean}. Accessor: @anchor{fn.file-chooser-use-preview-label}@code{file-chooser-use-preview-label}.
+@end itemize
+
+
+Signals:
+@itemize
+@item @anchor{signal.file-chooser.confirm-overwrite}"confirm-overwrite". Signature: (instance @ref{file-chooser}) @result{} @ref{file-chooser-confirmation}. Options: run-last.
+@item @anchor{signal.file-chooser.current-folder-changed}"current-folder-changed". Signature: (instance @ref{file-chooser}) @result{} void. Options: run-last.
+@item @anchor{signal.file-chooser.file-activated}"file-activated". Signature: (instance @ref{file-chooser}) @result{} void. Options: run-last.
+@item @anchor{signal.file-chooser.selection-changed}"selection-changed". Signature: (instance @ref{file-chooser}) @result{} void. Options: run-last.
+@item @anchor{signal.file-chooser.update-preview}"update-preview". Signature: (instance @ref{file-chooser}) @result{} void. Options: run-last.
+@end itemize
+
+
+@node file-chooser-embed
+@section file-chooser-embed
+@Class file-chooser-embed
+
+
+Slots:
+@itemize
+@end itemize
+
+
+Signals:
+@itemize
+@item @anchor{signal.file-chooser-embed.default-size-changed}"default-size-changed". Signature: (instance @ref{file-chooser-embed}) @result{} void. Options: run-last.
+@item @anchor{signal.file-chooser-embed.response-requested}"response-requested". Signature: (instance @ref{file-chooser-embed}) @result{} void. Options: run-last.
+@end itemize
+
+
+@node orientable
+@section orientable
+@Class orientable
+
+
+Slots:
+@itemize
+@item @anchor{slot.orientable.orientation}orientation. Type: @ref{orientation}. Accessor: @anchor{fn.orientable-orientation}@code{orientable-orientation}.
+@end itemize
+
+
+Signals:
+@itemize
+@end itemize
+
+
+@node print-operation-preview
+@section print-operation-preview
+@Class print-operation-preview
+
+
+Slots:
+@itemize
+@end itemize
+
+
+Signals:
+@itemize
+@item @anchor{signal.print-operation-preview.got-page-size}"got-page-size". Signature: (instance @ref{print-operation-preview}), (arg-1 @ref{print-context}), (arg-2 @ref{page-setup}) @result{} void. Options: run-last.
+@item @anchor{signal.print-operation-preview.ready}"ready". Signature: (instance @ref{print-operation-preview}), (arg-1 @ref{print-context}) @result{} void. Options: run-last.
+@end itemize
+
+
+@node recent-chooser
+@section recent-chooser
+@Class recent-chooser
+
+
+Slots:
+@itemize
+@item @anchor{slot.recent-chooser.filter}filter. Type: @ref{recent-filter}. Accessor: @anchor{fn.recent-chooser-filter}@code{recent-chooser-filter}.
+@item @anchor{slot.recent-chooser.limit}limit. Type: @code{integer}. Accessor: @anchor{fn.recent-chooser-limit}@code{recent-chooser-limit}.
+@item @anchor{slot.recent-chooser.local-only}local-only. Type: @code{boolean}. Accessor: @anchor{fn.recent-chooser-local-only}@code{recent-chooser-local-only}.
+@item @anchor{slot.recent-chooser.recent-manager}recent-manager. Type: @ref{recent-manager}. Accessor: @anchor{fn.recent-chooser-recent-manager}@code{recent-chooser-recent-manager}. Write-only.
+@item @anchor{slot.recent-chooser.select-multiple}select-multiple. Type: @code{boolean}. Accessor: @anchor{fn.recent-chooser-select-multiple}@code{recent-chooser-select-multiple}.
+@item @anchor{slot.recent-chooser.show-icons}show-icons. Type: @code{boolean}. Accessor: @anchor{fn.recent-chooser-show-icons}@code{recent-chooser-show-icons}.
+@item @anchor{slot.recent-chooser.show-not-found}show-not-found. Type: @code{boolean}. Accessor: @anchor{fn.recent-chooser-show-not-found}@code{recent-chooser-show-not-found}.
+@item @anchor{slot.recent-chooser.show-private}show-private. Type: @code{boolean}. Accessor: @anchor{fn.recent-chooser-show-private}@code{recent-chooser-show-private}.
+@item @anchor{slot.recent-chooser.show-tips}show-tips. Type: @code{boolean}. Accessor: @anchor{fn.recent-chooser-show-tips}@code{recent-chooser-show-tips}.
+@item @anchor{slot.recent-chooser.sort-type}sort-type. Type: @ref{recent-sort-type}. Accessor: @anchor{fn.recent-chooser-sort-type}@code{recent-chooser-sort-type}.
+@end itemize
+
+
+Signals:
+@itemize
+@item @anchor{signal.recent-chooser.item-activated}"item-activated". Signature: (instance @ref{recent-chooser}) @result{} void. Options: run-last.
+@item @anchor{signal.recent-chooser.selection-changed}"selection-changed". Signature: (instance @ref{recent-chooser}) @result{} void. Options: run-last.
+@end itemize
+
+
+@node tool-shell
+@section tool-shell
+@Class tool-shell
+
+
+Slots:
+@itemize
+@end itemize
+
+
+Signals:
+@itemize
+@end itemize
+
+
+@node tree-drag-dest
+@section tree-drag-dest
+@Class tree-drag-dest
+
+
+Slots:
+@itemize
+@end itemize
+
+
+Signals:
+@itemize
+@end itemize
+
+
+@node tree-drag-source
+@section tree-drag-source
+@Class tree-drag-source
+
+
+Slots:
+@itemize
+@end itemize
+
+
+Signals:
+@itemize
+@end itemize
+
+
+@node tree-model
+@section tree-model
+@Class tree-model
+
+
+Slots:
+@itemize
+@end itemize
+
+
+Signals:
+@itemize
+@item @anchor{signal.tree-model.row-changed}"row-changed". Signature: (instance @ref{tree-model}), (arg-1 @ref{tree-path}), (arg-2 @ref{tree-iter}) @result{} void. Options: run-last.
+@item @anchor{signal.tree-model.row-deleted}"row-deleted". Signature: (instance @ref{tree-model}), (arg-1 @ref{tree-path}) @result{} void. Options: run-first.
+@item @anchor{signal.tree-model.row-has-child-toggled}"row-has-child-toggled". Signature: (instance @ref{tree-model}), (arg-1 @ref{tree-path}), (arg-2 @ref{tree-iter}) @result{} void. Options: run-last.
+@item @anchor{signal.tree-model.row-inserted}"row-inserted". Signature: (instance @ref{tree-model}), (arg-1 @ref{tree-path}), (arg-2 @ref{tree-iter}) @result{} void. Options: run-first.
+@item @anchor{signal.tree-model.rows-reordered}"rows-reordered". Signature: (instance @ref{tree-model}), (arg-1 @ref{tree-path}), (arg-2 @ref{tree-iter}), (arg-3 gpointer) @result{} void. Options: run-first.
+@end itemize
+
+
+@node tree-sortable
+@section tree-sortable
+@Class tree-sortable
+
+
+Slots:
+@itemize
+@end itemize
+
+
+Signals:
+@itemize
+@item @anchor{signal.tree-sortable.sort-column-changed}"sort-column-changed". Signature: (instance @ref{tree-sortable}) @result{} void. Options: run-last.
+@end itemize
+
+

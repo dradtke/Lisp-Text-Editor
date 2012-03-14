@@ -1,0 +1,126 @@
+@menu
+* event-mask::
+* gdk-event-mask::
+* modifier-type::
+* window-hints::
+* window-state::
+@end menu
+
+@node event-mask
+@section event-mask
+@Flags event-mask
+Values: 
+@itemize
+@item @anchor{flags.event-mask.all-events-mask}:all-events-mask
+@item @anchor{flags.event-mask.button-motion-mask}:button-motion-mask
+@item @anchor{flags.event-mask.button-press-mask}:button-press-mask
+@item @anchor{flags.event-mask.button-release-mask}:button-release-mask
+@item @anchor{flags.event-mask.button1-motion-mask}:button1-motion-mask
+@item @anchor{flags.event-mask.button2-motion-mask}:button2-motion-mask
+@item @anchor{flags.event-mask.button3-motion-mask}:button3-motion-mask
+@item @anchor{flags.event-mask.enter-notify-mask}:enter-notify-mask
+@item @anchor{flags.event-mask.exposure-mask}:exposure-mask
+@item @anchor{flags.event-mask.focus-change-mask}:focus-change-mask
+@item @anchor{flags.event-mask.key-press-mask}:key-press-mask
+@item @anchor{flags.event-mask.key-release-mask}:key-release-mask
+@item @anchor{flags.event-mask.leave-notify-mask}:leave-notify-mask
+@item @anchor{flags.event-mask.pointer-motion-hint-mask}:pointer-motion-hint-mask
+@item @anchor{flags.event-mask.pointer-motion-mask}:pointer-motion-mask
+@item @anchor{flags.event-mask.property-change-mask}:property-change-mask
+@item @anchor{flags.event-mask.proximity-in-mask}:proximity-in-mask
+@item @anchor{flags.event-mask.proximity-out-mask}:proximity-out-mask
+@item @anchor{flags.event-mask.scroll-mask}:scroll-mask
+@item @anchor{flags.event-mask.structure-mask}:structure-mask
+@item @anchor{flags.event-mask.substructure-mask}:substructure-mask
+@item @anchor{flags.event-mask.visibility-notify-mask}:visibility-notify-mask
+@end itemize
+
+
+@node gdk-event-mask
+@section gdk-event-mask
+@Flags gdk-event-mask
+Values: 
+@itemize
+@item @anchor{flags.gdk-event-mask.all-events-mask}:all-events-mask
+@item @anchor{flags.gdk-event-mask.button-motion-mask}:button-motion-mask
+@item @anchor{flags.gdk-event-mask.button-press-mask}:button-press-mask
+@item @anchor{flags.gdk-event-mask.button-release-mask}:button-release-mask
+@item @anchor{flags.gdk-event-mask.button1-motion-mask}:button1-motion-mask
+@item @anchor{flags.gdk-event-mask.button2-motion-mask}:button2-motion-mask
+@item @anchor{flags.gdk-event-mask.button3-motion-mask}:button3-motion-mask
+@item @anchor{flags.gdk-event-mask.enter-notify-mask}:enter-notify-mask
+@item @anchor{flags.gdk-event-mask.exposure-mask}:exposure-mask
+@item @anchor{flags.gdk-event-mask.focus-change-mask}:focus-change-mask
+@item @anchor{flags.gdk-event-mask.key-press-mask}:key-press-mask
+@item @anchor{flags.gdk-event-mask.key-release-mask}:key-release-mask
+@item @anchor{flags.gdk-event-mask.leave-notify-mask}:leave-notify-mask
+@item @anchor{flags.gdk-event-mask.pointer-motion-hint-mask}:pointer-motion-hint-mask
+@item @anchor{flags.gdk-event-mask.pointer-motion-mask}:pointer-motion-mask
+@item @anchor{flags.gdk-event-mask.property-change-mask}:property-change-mask
+@item @anchor{flags.gdk-event-mask.proximity-in-mask}:proximity-in-mask
+@item @anchor{flags.gdk-event-mask.proximity-out-mask}:proximity-out-mask
+@item @anchor{flags.gdk-event-mask.scroll-mask}:scroll-mask
+@item @anchor{flags.gdk-event-mask.structure-mask}:structure-mask
+@item @anchor{flags.gdk-event-mask.substructure-mask}:substructure-mask
+@item @anchor{flags.gdk-event-mask.visibility-notify-mask}:visibility-notify-mask
+@end itemize
+
+
+@node modifier-type
+@section modifier-type
+@Flags modifier-type
+Values: 
+@itemize
+@item @anchor{flags.modifier-type.button1-mask}:button1-mask
+@item @anchor{flags.modifier-type.button2-mask}:button2-mask
+@item @anchor{flags.modifier-type.button3-mask}:button3-mask
+@item @anchor{flags.modifier-type.button4-mask}:button4-mask
+@item @anchor{flags.modifier-type.button5-mask}:button5-mask
+@item @anchor{flags.modifier-type.control-mask}:control-mask
+@item @anchor{flags.modifier-type.hyper-mask}:hyper-mask
+@item @anchor{flags.modifier-type.lock-mask}:lock-mask
+@item @anchor{flags.modifier-type.meta-mask}:meta-mask
+@item @anchor{flags.modifier-type.mod1-mask}:mod1-mask
+@item @anchor{flags.modifier-type.mod2-mask}:mod2-mask
+@item @anchor{flags.modifier-type.mod3-mask}:mod3-mask
+@item @anchor{flags.modifier-type.mod4-mask}:mod4-mask
+@item @anchor{flags.modifier-type.mod5-mask}:mod5-mask
+@item @anchor{flags.modifier-type.modifier-mask}:modifier-mask
+@item @anchor{flags.modifier-type.release-mask}:release-mask
+@item @anchor{flags.modifier-type.shift-mask}:shift-mask
+@item @anchor{flags.modifier-type.super-mask}:super-mask
+@end itemize
+
+
+@node window-hints
+@section window-hints
+@Flags window-hints
+Values: 
+@itemize
+@item @anchor{flags.window-hints.aspect}:aspect
+@item @anchor{flags.window-hints.base-size}:base-size
+@item @anchor{flags.window-hints.max-size}:max-size
+@item @anchor{flags.window-hints.min-size}:min-size
+@item @anchor{flags.window-hints.pos}:pos
+@item @anchor{flags.window-hints.resize-inc}:resize-inc
+@item @anchor{flags.window-hints.user-pos}:user-pos
+@item @anchor{flags.window-hints.user-size}:user-size
+@item @anchor{flags.window-hints.win-gravity}:win-gravity
+@end itemize
+
+
+@node window-state
+@section window-state
+@Flags window-state
+Values: 
+@itemize
+@item @anchor{flags.window-state.above}:above
+@item @anchor{flags.window-state.below}:below
+@item @anchor{flags.window-state.fullscreen}:fullscreen
+@item @anchor{flags.window-state.iconified}:iconified
+@item @anchor{flags.window-state.maximized}:maximized
+@item @anchor{flags.window-state.sticky}:sticky
+@item @anchor{flags.window-state.withdrawn}:withdrawn
+@end itemize
+
+

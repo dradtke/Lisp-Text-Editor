@@ -1,0 +1,10 @@
+Use GValue instead of building vararg C-function calls with eval. So performance is improved a lot.
+
+Made all CFFI<->GType conversions at level of gobject/glib layers. So GTK layer is much nicer.
+
+Use defgeneric to make SBCL happy (I tired of STYLE-WARNING's)
+
++ GtkTextView
++ GtkTextBuffer
+
++ examples/ex7.lisp: based on TreeView table with editable cells and popup editing dialog

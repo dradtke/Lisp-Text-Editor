@@ -1,0 +1,370 @@
+\input texinfo  @c -*-texinfo-*-
+@c %**start of header (This is for running texinfo on a region.)
+@setfilename gtk.info
+@settitle CL-Gtk2
+@c %**end of header (This is for running texinfo on a region.)
+
+@c @documentencoding utf-8
+
+@macro Function {name}
+@defun \name\
+@end defun
+@end macro
+
+@macro Macro {name}
+@defmac \name\
+@end defmac
+@end macro
+
+@macro Struct {name}
+@deftp {Structure} \name\
+@end deftp
+@end macro
+
+@macro Class {name}
+@deftp {Class} \name\
+@end deftp
+@end macro
+
+@macro Superclass {name}
+Superclass: @ref{\name\}
+@end macro
+
+@macro Enum {name}
+@deftp {Enum} \name\
+@end deftp
+@end macro
+
+@macro EnumVRef {name,value}
+@ref{enum.\name\.\value\,@code{:\value\}}
+@end macro
+
+@macro Flags {name}
+@deftp {Flags} \name\
+@end deftp
+@end macro
+
+@macro FlagsVRef {name,value}
+@ref{flags.\name\.\value\,@code{:\value\}}
+@end macro
+
+@macro Accessor {name}
+@deffn {Accessor} \name\
+@end deffn
+@end macro
+
+@macro TypedAccessor {name, class, type}
+@deffn {Accessor} \name\ \class\
+For class: @ref{\class\}
+
+Type: \type\
+@end deffn
+@end macro
+
+@macro GenericFunction {name}
+@deffn {Generic Function} \name\
+@end deffn
+@end macro
+
+@macro Method {name}
+@deffn {Method} \name\
+@end deffn
+@end macro
+
+@macro ForeignType {name}
+@deftp {Foreign Type} \name\
+@end deftp
+@end macro
+
+@macro Variable {name}
+@defvr {Special Variable} \name\
+@end defvr
+@end macro
+
+@macro Condition {name}
+@deftp {Condition Type} \name\
+@end deftp
+@end macro
+
+@macro Constant {name}
+@defvr {Constant} \name\
+@end defvr
+@end macro
+
+@macro RFunction {name}
+@anchor{\name\}@defun \name\
+@end defun
+@end macro
+
+@macro RMacro {name}
+@anchor{\name\}@defmac \name\
+@end defmac
+@end macro
+
+@macro RStruct {name}
+@anchor{\name\}@deftp {Structure} \name\
+@end deftp
+@end macro
+
+@macro RClass {name}
+@anchor{\name\}@deftp {Class} \name\
+@end deftp
+@end macro
+
+@macro RSuperclass {name}
+@anchor{\name\}Superclass: @ref{\name\}
+@end macro
+
+@macro REnum {name}
+@anchor{\name\}@deftp {Enum} \name\
+@end deftp
+@end macro
+
+@macro RFlags {name}
+@anchor{\name\}@deftp {Flags} \name\
+@end deftp
+@end macro
+
+@macro RAccessor {name}
+@anchor{\name\}@deffn {Accessor} \name\
+@end deffn
+@end macro
+
+@macro RTypedAccessor {name, class, type}
+@anchor{\name\}@deffn {Accessor} \name\ \class\
+For class: @ref{\class\}
+
+Type: \type\
+@end deffn
+@end macro
+
+@macro RGenericFunction {name}
+@anchor{\name\}@deffn {Generic Function} \name\
+@end deffn
+@end macro
+
+@macro RMethod {name}
+@anchor{\name\}@deffn {Method} \name\
+@end deffn
+@end macro
+
+@macro RForeignType {name}
+@anchor{\name\}@deftp {Foreign Type} \name\
+@end deftp
+@end macro
+
+@macro RVariable {name}
+@anchor{\name\}@defvr {Special Variable} \name\
+@end defvr
+@end macro
+
+@macro RCondition {name}
+@anchor{\name\}@deftp {Condition Type} \name\
+@end deftp
+@end macro
+
+@macro RConstant {name}
+@anchor{\name\}@defvr {Constant} \name\
+@end defvr
+@end macro
+
+@macro SlotRef {class, slot}
+@ref{slot.\class\.\slot\,\class\-\slot\}
+@end macro
+
+@macro SignalRef {class, signal}
+@ref{signal.\class\.\signal\,\class\::\signal\}
+@end macro
+
+@macro cffi
+@acronym{CFFI}
+@end macro
+
+@macro impnote {text}
+@quotation
+@strong{Implementor's note:} @emph{\text\}
+@end quotation
+@end macro
+
+@c Info "requires" that x-refs end in a period or comma, or ) in the
+@c case of @pxref.  So the following implements that requirement for
+@c the "See also" subheadings that permeate this manual, but only in
+@c Info mode.
+@ifinfo
+@macro seealso {name}
+@ref{\name\}.
+@end macro
+@end ifinfo
+
+@c @ifnotinfo
+@c @alias seealso = ref
+@c @end ifnotinfo
+
+@c Typeset comments in roman font for the TeX output.
+@c @iftex
+@c @alias lispcmt = r
+@c @end iftex
+@c @ifnottex
+@c @alias lispcmt = asis
+@c @end ifnottex
+
+@c My copy of makeinfo is not generating any HTML for @result{} for
+@c some odd reason. (It certainly used to...)
+@ifhtml
+@macro result
+=>
+@end macro
+@end ifhtml
+
+@c Similar macro to @result. Its purpose is to work around the fact
+@c that &rArr; does not work properly inside @lisp.
+@ifhtml
+@macro res
+@html
+&rArr;
+@end html
+@end macro
+@end ifhtml
+
+@ifnothtml
+@alias res = result
+@end ifnothtml
+
+@c ============================= Macros =============================
+
+
+@c Show types, functions, and concepts in the same index.
+@syncodeindex tp cp
+@syncodeindex fn cp
+
+@titlepage
+@title CL-GTK2
+@subtitle A Common Lisp binding for Gtk+
+@author Dmitry Kalyanov
+@end titlepage
+
+@contents
+
+@ifnottex
+@node Top
+@top cl-gtk2-gtk
+@end ifnottex
+
+@menu
+* Overview::
+* Installation::
+* GLib Reference::
+* GObject Reference::
+* Gdk Reference::
+* Gtk Reference::
+@end menu
+
+@node Overview
+@chapter Overview
+
+@code{cl-gtk2} is the GUI library for Common Lisp. @code{cl-gtk2} is based on @uref{http://www.gtk.org/,,Gtk+} GUI library and is Common Lisp binding for it. @code{cl-gtk2} allows you to create graphical user interfaces for Common Lisp applications.
+
+As @code{Gtk+} is based on object system GObject, @code{cl-gtk2} is based on a binding to this object system called @code{cl-gtk2-gobject}.
+
+@code{cl-gtk2} provides a thin wrapper around @code{Gtk+} functionality, mostly retaining the same set of classes, properties and methods.
+
+The important parts of @code{Gtk+} are:
+@itemize
+@item GObject type system
+@itemize
+@item Classes
+@item Objects
+@item Signals
+@end itemize
+@item Events
+@item Layout and composition of widgets
+@item Widget set
+@item Using Gtk+ with threads
+@item Building stand-alone applications
+@end itemize
+
+@node Installation
+@chapter Installation
+
+@code{cl-gtk2} has the following dependencies. They all must be installed before installing @code{cl-gtk2}.
+
+@itemize
+@item @uref{http://common-lisp.net/project/cffi/,,CFFI} (version >= 0.10.4)
+@item @uref{http://www.cliki.net/trivial-garbage,,Trivial-Garbage} (version >= 0.18)
+@item @uref{http://common-lisp.net/project/iterate/,,Iterate} (version >= 1.4.3)
+@item @uref{http://common-lisp.net/project/bordeaux-threads/,,Bordeaux-Threads} (version >= 0.6.0)
+@item @uref{http://common-lisp.net/project/closer/closer-mop.html,,Closer-MOP} (version >= 0.55)
+@item @uref{http://common-lisp.net/project/cl-opengl/,,cl-opengl} (if you intend to use <code>cl-gtk2-cairo</code>)
+@item @uref{http://common-lisp.net/project/cl-cairo2/,,cl-cairo2} (if you intend to use <code>cl-gtk2-gtkglext</code>)
+@end itemize
+
+At first, source code should be downloded. Current version of CL-GTK2 can be downloaded from @uref{http://common-lisp.net/project/cl-gtk2/files/cl-gtk2-0.1.1.tar.gz}.
+
+Development tree of CL-GTK2 can be cloned with @uref{http://git-scm.org/,,Git}:
+@example
+git clone git://repo.or.cz/cl-gtk2.git
+@end example
+or, using the mirror:
+@example
+git clone git://github.com/dmitryvk/cl-gtk2.git
+@end example
+
+To be able to compile, load and use @code{cl-gtk2}, you should register the @code{ASDF} system definitions.
+
+To do this, either add @code{glib}, @code{gdk} and @code{gtk} directories to @code{asdf:*central-registry*}:
+@lisp
+(push "/path/to/cl-gtk2/glib" asdf:*central-registry*)
+(push "/path/to/cl-gtk2/pango/" asdf:*central-registry*)
+(push "/path/to/cl-gtk2/gdk" asdf:*central-registry*)
+(push "/path/to/cl-gtk2/gtk" asdf:*central-registry*)
+(push "/path/to/cl-gtk2/gtk-glext/" asdf:*central-registry*)
+(push "/path/to/cl-gtk2/cairo/" asdf:*central-registry*)
+@end lisp
+or create symlinks to @code{cl-gtk2-glib.asd}, @code{cl-gtk2-gdk.asd} and @code{cl-gtk2-gtk.asd} files in a directory where @code{ASDF} systems are located (it might be @code{/usr/share/common-lisp/systems/} for system-wide installation in Gentoo Linux and Debian Linux, @code{~/.sbcl/systems/} for user installation for SBCL compiler):
+@example
+cd ~/.sbcl/systems           # depends on your system
+ln -s /path/to/cl-gtk2/glib/cl-gtk2-glib.asd .
+ln -s /path/to/cl-gtk2/pango/cl-gtk2-pango.asd .
+ln -s /path/to/cl-gtk2/gdk/cl-gtk2-gdk.asd .
+ln -s /path/to/cl-gtk2/gtk/cl-gtk2-gtk.asd .
+ln -s /path/to/cl-gtk2/gtkglext/cl-gtk2-gtkglext.asd .
+ln -s /path/to/cl-gtk2/cairo/cl-gtk2-cairo.asd .
+@end example
+
+In Gentoo Linux, it is possible to use layman (see @uref{http://www.gentoo.org/proj/en/overlays/userguide.xml,,Gentoo Overlays Users' Guide}) to add @code{lisp} and @code{cl-gtk2} overlays that contains neccessary ebuilds:
+@example
+layman -a lisp
+layman --overlays=http://github.com/dmitryvk/cl-gtk2-overlay/raw/master/layman-list.xml -a cl-gtk2
+emerge cl-gtk2
+@end example
+
+
+@node GLib Reference
+@chapter GLib Reference
+
+@lowersections
+@include glib.ref.texi
+@raisesections
+
+@node GObject Reference
+@chapter GObject Reference
+
+@lowersections
+
+@include gobject.ref.texi
+
+@raisesections
+
+@node Gdk Reference
+@chapter Gdk Reference
+
+@include gdk.ref.texi
+
+@node Gtk Reference
+@chapter Gtk Reference
+
+@lowersections
+@include gtk.ref.texi
+@raisesections
+
+@bye

@@ -1,0 +1,344 @@
+@menu
+* accel-flags::
+* arg-flags::
+* attach-options::
+* button-action::
+* calendar-display-options::
+* cell-renderer-state::
+* debug-flag::
+* dest-defaults::
+* dialog-flags::
+* file-filter-flags::
+* gdk-modifier-type::
+* icon-lookup-flags::
+* object-flags::
+* private-flags::
+* rc-flags::
+* recent-filter-flags::
+* signal-run-type::
+* target-flags::
+* text-search-flags::
+* tree-model-flags::
+* ui-manager-item-type::
+* widget-flags::
+@end menu
+
+@node accel-flags
+@section accel-flags
+@Flags accel-flags
+Values: 
+@itemize
+@item @anchor{flags.accel-flags.locked}:locked
+@item @anchor{flags.accel-flags.mask}:mask
+@item @anchor{flags.accel-flags.visible}:visible
+@end itemize
+
+
+@node arg-flags
+@section arg-flags
+@Flags arg-flags
+Values: 
+@itemize
+@item @anchor{flags.arg-flags.child-arg}:child-arg
+@item @anchor{flags.arg-flags.construct}:construct
+@item @anchor{flags.arg-flags.construct-only}:construct-only
+@item @anchor{flags.arg-flags.readable}:readable
+@item @anchor{flags.arg-flags.writable}:writable
+@end itemize
+
+
+@node attach-options
+@section attach-options
+@Flags attach-options
+Values: 
+@itemize
+@item @anchor{flags.attach-options.expand}:expand
+@item @anchor{flags.attach-options.fill}:fill
+@item @anchor{flags.attach-options.shrink}:shrink
+@end itemize
+
+
+@node button-action
+@section button-action
+@Flags button-action
+Values: 
+@itemize
+@item @anchor{flags.button-action.drags}:drags
+@item @anchor{flags.button-action.expands}:expands
+@item @anchor{flags.button-action.ignored}:ignored
+@item @anchor{flags.button-action.selects}:selects
+@end itemize
+
+
+@node calendar-display-options
+@section calendar-display-options
+@Flags calendar-display-options
+Values: 
+@itemize
+@item @anchor{flags.calendar-display-options.no-month-change}:no-month-change
+@item @anchor{flags.calendar-display-options.show-day-names}:show-day-names
+@item @anchor{flags.calendar-display-options.show-details}:show-details
+@item @anchor{flags.calendar-display-options.show-heading}:show-heading
+@item @anchor{flags.calendar-display-options.show-week-numbers}:show-week-numbers
+@item @anchor{flags.calendar-display-options.week-start-monday}:week-start-monday
+@end itemize
+
+
+@node cell-renderer-state
+@section cell-renderer-state
+@Flags cell-renderer-state
+Values: 
+@itemize
+@item @anchor{flags.cell-renderer-state.focused}:focused
+@item @anchor{flags.cell-renderer-state.insensitive}:insensitive
+@item @anchor{flags.cell-renderer-state.prelit}:prelit
+@item @anchor{flags.cell-renderer-state.selected}:selected
+@item @anchor{flags.cell-renderer-state.sorted}:sorted
+@end itemize
+
+
+@node debug-flag
+@section debug-flag
+@Flags debug-flag
+Values: 
+@itemize
+@item @anchor{flags.debug-flag.builder}:builder
+@item @anchor{flags.debug-flag.geometry}:geometry
+@item @anchor{flags.debug-flag.icontheme}:icontheme
+@item @anchor{flags.debug-flag.keybindings}:keybindings
+@item @anchor{flags.debug-flag.misc}:misc
+@item @anchor{flags.debug-flag.modules}:modules
+@item @anchor{flags.debug-flag.multihead}:multihead
+@item @anchor{flags.debug-flag.plugsocket}:plugsocket
+@item @anchor{flags.debug-flag.printing}:printing
+@item @anchor{flags.debug-flag.text}:text
+@item @anchor{flags.debug-flag.tree}:tree
+@item @anchor{flags.debug-flag.updates}:updates
+@end itemize
+
+
+@node dest-defaults
+@section dest-defaults
+@Flags dest-defaults
+Values: 
+@itemize
+@item @anchor{flags.dest-defaults.all}:all
+@item @anchor{flags.dest-defaults.drop}:drop
+@item @anchor{flags.dest-defaults.highlight}:highlight
+@item @anchor{flags.dest-defaults.motion}:motion
+@end itemize
+
+
+@node dialog-flags
+@section dialog-flags
+@Flags dialog-flags
+Values: 
+@itemize
+@item @anchor{flags.dialog-flags.destroy-with-parent}:destroy-with-parent
+@item @anchor{flags.dialog-flags.modal}:modal
+@item @anchor{flags.dialog-flags.no-separator}:no-separator
+@end itemize
+
+
+@node file-filter-flags
+@section file-filter-flags
+@Flags file-filter-flags
+Values: 
+@itemize
+@item @anchor{flags.file-filter-flags.display-name}:display-name
+@item @anchor{flags.file-filter-flags.filename}:filename
+@item @anchor{flags.file-filter-flags.mime-type}:mime-type
+@item @anchor{flags.file-filter-flags.uri}:uri
+@end itemize
+
+
+@node gdk-modifier-type
+@section gdk-modifier-type
+@Flags gdk-modifier-type
+Values: 
+@itemize
+@item @anchor{flags.gdk-modifier-type.button1-mask}:button1-mask
+@item @anchor{flags.gdk-modifier-type.button2-mask}:button2-mask
+@item @anchor{flags.gdk-modifier-type.button3-mask}:button3-mask
+@item @anchor{flags.gdk-modifier-type.button4-mask}:button4-mask
+@item @anchor{flags.gdk-modifier-type.button5-mask}:button5-mask
+@item @anchor{flags.gdk-modifier-type.control-mask}:control-mask
+@item @anchor{flags.gdk-modifier-type.hyper-mask}:hyper-mask
+@item @anchor{flags.gdk-modifier-type.lock-mask}:lock-mask
+@item @anchor{flags.gdk-modifier-type.meta-mask}:meta-mask
+@item @anchor{flags.gdk-modifier-type.mod1-mask}:mod1-mask
+@item @anchor{flags.gdk-modifier-type.mod2-mask}:mod2-mask
+@item @anchor{flags.gdk-modifier-type.mod3-mask}:mod3-mask
+@item @anchor{flags.gdk-modifier-type.mod4-mask}:mod4-mask
+@item @anchor{flags.gdk-modifier-type.mod5-mask}:mod5-mask
+@item @anchor{flags.gdk-modifier-type.modifier-mask}:modifier-mask
+@item @anchor{flags.gdk-modifier-type.release-mask}:release-mask
+@item @anchor{flags.gdk-modifier-type.shift-mask}:shift-mask
+@item @anchor{flags.gdk-modifier-type.super-mask}:super-mask
+@end itemize
+
+
+@node icon-lookup-flags
+@section icon-lookup-flags
+@Flags icon-lookup-flags
+Values: 
+@itemize
+@item @anchor{flags.icon-lookup-flags.force-size}:force-size
+@item @anchor{flags.icon-lookup-flags.force-svg}:force-svg
+@item @anchor{flags.icon-lookup-flags.generic-fallback}:generic-fallback
+@item @anchor{flags.icon-lookup-flags.no-svg}:no-svg
+@item @anchor{flags.icon-lookup-flags.use-builtin}:use-builtin
+@end itemize
+
+
+@node object-flags
+@section object-flags
+@Flags object-flags
+Values: 
+@itemize
+@item @anchor{flags.object-flags.floating}:floating
+@item @anchor{flags.object-flags.in-destruction}:in-destruction
+@item @anchor{flags.object-flags.reserved-1}:reserved-1
+@item @anchor{flags.object-flags.reserved-2}:reserved-2
+@end itemize
+
+
+@node private-flags
+@section private-flags
+@Flags private-flags
+Values: 
+@itemize
+@item @anchor{flags.private-flags.alloc-needed}:alloc-needed
+@item @anchor{flags.private-flags.anchored}:anchored
+@item @anchor{flags.private-flags.child-visible}:child-visible
+@item @anchor{flags.private-flags.direction-ltr}:direction-ltr
+@item @anchor{flags.private-flags.direction-set}:direction-set
+@item @anchor{flags.private-flags.has-pointer}:has-pointer
+@item @anchor{flags.private-flags.has-shape-mask}:has-shape-mask
+@item @anchor{flags.private-flags.in-reparent}:in-reparent
+@item @anchor{flags.private-flags.redraw-on-alloc}:redraw-on-alloc
+@item @anchor{flags.private-flags.request-needed}:request-needed
+@item @anchor{flags.private-flags.resize-pending}:resize-pending
+@item @anchor{flags.private-flags.shadowed}:shadowed
+@item @anchor{flags.private-flags.user-style}:user-style
+@end itemize
+
+
+@node rc-flags
+@section rc-flags
+@Flags rc-flags
+Values: 
+@itemize
+@item @anchor{flags.rc-flags.base}:base
+@item @anchor{flags.rc-flags.bg}:bg
+@item @anchor{flags.rc-flags.fg}:fg
+@item @anchor{flags.rc-flags.text}:text
+@end itemize
+
+
+@node recent-filter-flags
+@section recent-filter-flags
+@Flags recent-filter-flags
+Values: 
+@itemize
+@item @anchor{flags.recent-filter-flags.age}:age
+@item @anchor{flags.recent-filter-flags.application}:application
+@item @anchor{flags.recent-filter-flags.display-name}:display-name
+@item @anchor{flags.recent-filter-flags.group}:group
+@item @anchor{flags.recent-filter-flags.mime-type}:mime-type
+@item @anchor{flags.recent-filter-flags.uri}:uri
+@end itemize
+
+
+@node signal-run-type
+@section signal-run-type
+@Flags signal-run-type
+Values: 
+@itemize
+@item @anchor{flags.signal-run-type.action}:action
+@item @anchor{flags.signal-run-type.both}:both
+@item @anchor{flags.signal-run-type.first}:first
+@item @anchor{flags.signal-run-type.last}:last
+@item @anchor{flags.signal-run-type.no-hooks}:no-hooks
+@item @anchor{flags.signal-run-type.no-recurse}:no-recurse
+@end itemize
+
+
+@node target-flags
+@section target-flags
+@Flags target-flags
+Values: 
+@itemize
+@item @anchor{flags.target-flags.other-app}:other-app
+@item @anchor{flags.target-flags.other-widget}:other-widget
+@item @anchor{flags.target-flags.same-app}:same-app
+@item @anchor{flags.target-flags.same-widget}:same-widget
+@end itemize
+
+
+@node text-search-flags
+@section text-search-flags
+@Flags text-search-flags
+Values: 
+@itemize
+@item @anchor{flags.text-search-flags.text-only}:text-only
+@item @anchor{flags.text-search-flags.visible-only}:visible-only
+@end itemize
+
+
+@node tree-model-flags
+@section tree-model-flags
+@Flags tree-model-flags
+Values: 
+@itemize
+@item @anchor{flags.tree-model-flags.iters-persist}:iters-persist
+@item @anchor{flags.tree-model-flags.list-only}:list-only
+@end itemize
+
+
+@node ui-manager-item-type
+@section ui-manager-item-type
+@Flags ui-manager-item-type
+Values: 
+@itemize
+@item @anchor{flags.ui-manager-item-type.accelerator}:accelerator
+@item @anchor{flags.ui-manager-item-type.auto}:auto
+@item @anchor{flags.ui-manager-item-type.menu}:menu
+@item @anchor{flags.ui-manager-item-type.menubar}:menubar
+@item @anchor{flags.ui-manager-item-type.menuitem}:menuitem
+@item @anchor{flags.ui-manager-item-type.placeholder}:placeholder
+@item @anchor{flags.ui-manager-item-type.popup}:popup
+@item @anchor{flags.ui-manager-item-type.popup-with-accels}:popup-with-accels
+@item @anchor{flags.ui-manager-item-type.separator}:separator
+@item @anchor{flags.ui-manager-item-type.toolbar}:toolbar
+@item @anchor{flags.ui-manager-item-type.toolitem}:toolitem
+@end itemize
+
+
+@node widget-flags
+@section widget-flags
+@Flags widget-flags
+Values: 
+@itemize
+@item @anchor{flags.widget-flags.app-paintable}:app-paintable
+@item @anchor{flags.widget-flags.can-default}:can-default
+@item @anchor{flags.widget-flags.can-focus}:can-focus
+@item @anchor{flags.widget-flags.composite-child}:composite-child
+@item @anchor{flags.widget-flags.double-buffered}:double-buffered
+@item @anchor{flags.widget-flags.has-default}:has-default
+@item @anchor{flags.widget-flags.has-focus}:has-focus
+@item @anchor{flags.widget-flags.has-grab}:has-grab
+@item @anchor{flags.widget-flags.mapped}:mapped
+@item @anchor{flags.widget-flags.no-reparent}:no-reparent
+@item @anchor{flags.widget-flags.no-show-all}:no-show-all
+@item @anchor{flags.widget-flags.no-window}:no-window
+@item @anchor{flags.widget-flags.parent-sensitive}:parent-sensitive
+@item @anchor{flags.widget-flags.rc-style}:rc-style
+@item @anchor{flags.widget-flags.realized}:realized
+@item @anchor{flags.widget-flags.receives-default}:receives-default
+@item @anchor{flags.widget-flags.sensitive}:sensitive
+@item @anchor{flags.widget-flags.toplevel}:toplevel
+@item @anchor{flags.widget-flags.visible}:visible
+@end itemize
+
+

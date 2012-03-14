@@ -1,0 +1,181 @@
+@menu
+* Screens and displays::
+* Gdk Objects::
+* Gdk Structs::
+* Gdk Enums::
+* Gdk Flags::
+@end menu
+
+@node Screens and displays
+@section Screens and displays
+
+@menu
+* display::
+* screen::
+@end menu
+
+Multihead support is based around two main object types:
+@itemize
+@item @ref{display}
+@item @ref{screen}
+@end itemize
+
+@ref{display} objects are the GDK representation of the X Display which
+can be described as a workstation consisting of a keyboard a pointing
+device (such as a mouse) and one or more screens. It is used to open and
+keep track of various GdkScreen objects currently instanciated by the
+application. It is also used to grab and release the keyboard and the
+mouse pointer.
+
+@ref{screen} objects are the GDK representation of a physical screen. It
+is used throughout GDK and GTK+ to specify which screen the top level
+windows are to be displayed on. It is also used to query the screen
+specification and default settings such as the default colormap
+(@code{screen-default-colormap}), the screen width
+(@code{screen-width}), etc.
+
+The following code samples demonstrate common usage of the objects
+described above.
+
+Testing the number of screen on the current display:
+@lisp
+(use-package :gdk)
+
+(defvar *display* (default-display))
+
+(display-name *display*) @result{} ":0.0"
+
+(display-n-screens *display*) @result{} 1
+@end lisp
+
+Opening a second display:
+(TODO)
+@lisp
+/* screen2_name needs to be initialized before calling 
+/* gdk_display_new() */
+second_display = gdk_display_new (&argc, &argv, second_screen_name);
+if (second_display)
+    second_screen = gdk_display_get_default_screen (second_display);
+else 
+  @{
+	g_print ("Can't open display :\n\t%s\n\n",
+		  second_screen_name);
+    exit (1);	
+  @}
+/* now GdkScreen can be assigned to GtkWindows */
+
+window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+gtk_window_set_screen (window, second_screen);
+@end lisp
+
+@node display
+@subsection display
+
+@menu
+* display-name::
+* display-n-screens::
+* display-default-screen::
+@end menu
+
+@Class display
+@Superclass g-object
+
+@ref{display} controls the keyboard/mouse pointer grabs and a set of @ref{screen}s.
+
+@ref{display} objects purpose are two fold:
+
+@itemize
+@item To grab/ungrab keyboard focus and mouse pointer
+@item To manage and provide information about the @ref{screen}(s) available for this @ref{display}
+@end itemize
+
+@ref{display} objects are the GDK representation of the X Display which
+can be described as a workstation consisting of a keyboard a pointing
+device (such as a mouse) and one or more screens. It is used to open and
+keep track of various @ref{screen} objects currently instanciated by the
+application. It is also used to grab and release the keyboard and the
+mouse pointer.
+
+@node display-name
+@subsubsection display-name
+@TypedAccessor {display-name, display, @code{string}}
+The name of a @var{display} (e.g. @code{":0.0"})
+
+@node display-n-screens
+@subsubsection display-n-screens
+@TypedAccessor {display-n-screens, display, @code{integer}}
+The number of screen managed by the @var{display}.
+
+@node display-default-screen
+@subsubsection display-default-screens
+@TypedAccessor {display-default-screen, display, @code{screen}}
+The default screen of the @var{display}.
+
+@node screen
+@subsection screen
+
+@Class screen
+Superclass: @ref{g-object}
+
+Slots:
+@itemize
+@item @anchor{slot.screen.active-window}active-window. Type: @ref{gdk-window}. Accessor: @anchor{fn.screen-active-window}@code{screen-active-window}. Read-only.
+@item @anchor{slot.screen.composited-p}composited-p. Type: @code{boolean}. Accessor: @anchor{fn.screen-composited-p}@code{screen-composited-p}. Read-only.
+@item @anchor{slot.screen.default-colormap}default-colormap. Type: @ref{gdk-colormap}. Accessor: @anchor{fn.screen-default-colormap}@code{screen-default-colormap}.
+@item @anchor{slot.screen.display}display. Type: @ref{display}. Accessor: @anchor{fn.screen-display}@code{screen-display}. Read-only.
+@item @anchor{slot.screen.display-name}display-name. Type: @code{string}. Accessor: @anchor{fn.screen-display-name}@code{screen-display-name}. Read-only.
+@item @anchor{slot.screen.font-options}font-options. Type: gpointer. Accessor: @anchor{fn.screen-font-options}@code{screen-font-options}.
+@item @anchor{slot.screen.height}height. Type: @code{integer}. Accessor: @anchor{fn.screen-height}@code{screen-height}. Read-only.
+@item @anchor{slot.screen.height-mm}height-mm. Type: @code{integer}. Accessor: @anchor{fn.screen-height-mm}@code{screen-height-mm}. Read-only.
+@item @anchor{slot.screen.n-monitors}n-monitors. Type: @code{integer}. Accessor: @anchor{fn.screen-n-monitors}@code{screen-n-monitors}. Read-only.
+@item @anchor{slot.screen.number}number. Type: @code{integer}. Accessor: @anchor{fn.screen-number}@code{screen-number}. Read-only.
+@item @anchor{slot.screen.resolution}resolution. Type: @code{double-float}. Accessor: @anchor{fn.screen-resolution}@code{screen-resolution}.
+@item @anchor{slot.screen.rgb-colormap}rgb-colormap. Type: @ref{gdk-colormap}. Accessor: @anchor{fn.screen-rgb-colormap}@code{screen-rgb-colormap}. Read-only.
+@item @anchor{slot.screen.rgb-visual}rgb-visual. Type: @ref{visual}. Accessor: @anchor{fn.screen-rgb-visual}@code{screen-rgb-visual}. Read-only.
+@item @anchor{slot.screen.rgba-colormap}rgba-colormap. Type: @ref{gdk-colormap}. Accessor: @anchor{fn.screen-rgba-colormap}@code{screen-rgba-colormap}. Read-only.
+@item @anchor{slot.screen.rgba-visual}rgba-visual. Type: @ref{visual}. Accessor: @anchor{fn.screen-rgba-visual}@code{screen-rgba-visual}. Read-only.
+@item @anchor{slot.screen.root-window}root-window. Type: @ref{gdk-window}. Accessor: @anchor{fn.screen-root-window}@code{screen-root-window}. Read-only.
+@item @anchor{slot.screen.system-colormap}system-colormap. Type: @ref{gdk-colormap}. Accessor: @anchor{fn.screen-system-colormap}@code{screen-system-colormap}. Read-only.
+@item @anchor{slot.screen.system-visual}system-visual. Type: @ref{visual}. Accessor: @anchor{fn.screen-system-visual}@code{screen-system-visual}. Read-only.
+@item @anchor{slot.screen.toplevel-windows}toplevel-windows. Type: list of @ref{gdk-window}. Accessor: @anchor{fn.screen-toplevel-windows}@code{screen-toplevel-windows}. Read-only.
+@item @anchor{slot.screen.visuals}visuals. Type: list of @ref{visual}. Accessor: @anchor{fn.screen-visuals}@code{screen-visuals}. Read-only.
+@item @anchor{slot.screen.width}width. Type: @code{integer}. Accessor: @anchor{fn.screen-width}@code{screen-width}. Read-only.
+@item @anchor{slot.screen.width-mm}width-mm. Type: @code{integer}. Accessor: @anchor{fn.screen-width-mm}@code{screen-width-mm}. Read-only.
+@item @anchor{slot.screen.window-stack}window-stack. Type: list of @ref{gdk-window}. Accessor: @anchor{fn.screen-window-stack}@code{screen-window-stack}. Read-only.
+@end itemize
+
+
+Signals:
+@itemize
+@item @anchor{signal.screen.composited-changed}\"composited-changed\". Signature: (instance @ref{screen}) @result{} void. Options: run-last.
+@item @anchor{signal.screen.monitors-changed}\"monitors-changed\". Signature: (instance @ref{screen}) @result{} void. Options: run-last.
+@item @anchor{signal.screen.size-changed}\"size-changed\". Signature: (instance @ref{screen}) @result{} void. Options: run-last.
+@end itemize
+
+@node Gdk Objects
+@section Gdk Objects
+
+@lowersections
+@include gdk.objects.texi
+@raisesections
+
+@node Gdk Structs
+@section Gdk Structs
+
+@lowersections
+@include gdk.structs.texi
+@raisesections
+
+@node Gdk Enums
+@section Gdk Enums
+
+@lowersections
+@include gdk.enums.texi
+@raisesections
+
+@node Gdk Flags
+@section Gdk Flags
+
+@lowersections
+@include gdk.flags.texi
+@raisesections

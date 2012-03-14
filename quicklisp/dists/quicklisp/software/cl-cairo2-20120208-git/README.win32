@@ -1,0 +1,10 @@
+Tested Environments
+===================
+
+Windows XP+SP3/Vista+SP1: SBCL_1.0.13, libcairo-2_1.6.4, libpng_1.2.29, zlib_1.2.3
+
+
+Libcairo-2.dll
+==============
+
+Build from the 1.6.4 release snapshot on the MinGW system.
